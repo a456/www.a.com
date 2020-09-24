@@ -1,0 +1,30 @@
+【错误SQL】
+SELECT count(1) FROM `oa_customer` a left join `oa_admin` b on a.`uid`=b.id WHERE 1=1    and (a.`uid`='1' or `fzid`='1' or a.`createid`='1' or a.`uid` in(select `id` from `oa_admin` where instr(concat(',', superid, ','), ',1,')>0)) and a.`uid`=0
+
+【原因】
+Unknown column 'fzid' in 'where clause'
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=mode_customer|input&d=flow&modeid=7&ajaxbool=true&rnd=790043&pnum=dist
+
+【POST】
+[tablename_abc]：gi0aq0gu0qbb0qdd0mq0am0qqu0id0gg0mx0ag06
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：
+[dir]：
+[loadci]：1
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：customer
+[start]：0
+[page]：1
+[limit]：15
+[atype]：distdfp
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0

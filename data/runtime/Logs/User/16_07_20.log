@@ -1,0 +1,89 @@
+[ 2016-07-20T16:15:55+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `yxt_nav` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 1 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 2 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='5' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='10' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='14' ) ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='18' ) ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='22' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yxt_coursetype` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `yxt_coursetype` WHERE ( parent=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_users` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yxt_users` WHERE `mobile` = '13625623652' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `yxt_users` (`user_login`,`user_email`,`mobile`,`user_nicename`,`user_pass`,`last_login_ip`,`create_time`,`last_login_time`,`user_status`,`user_type`) VALUES ('','','13625623652','','###c5cb2f1217da93d6e1da96bdec935831','127.0.0.1','2016-07-20 16:15:55','2016-07-20 16:15:55','1','2') [ RunTime:0.0000s ]
+
+[ 2016-07-20T16:16:21+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=setting
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:16:26+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=pic
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:16:28+08:00 ] 127.0.0.1 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `yxt_nav` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 1 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 2 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='5' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='10' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='14' ) ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='18' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='22' ) ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yxt_coursetype` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `yxt_coursetype` WHERE ( parent=0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-20T16:16:37+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=avatar_upload
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:16:44+08:00 ] 127.0.0.1 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `yxt_nav` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 1 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE `cid` = 2 AND `status` = 1 AND `parentid` = 0 ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='5' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='10' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='14' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='18' ) ORDER BY listorder asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yxt_nav` WHERE ( parentid='22' ) ORDER BY listorder asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yxt_coursetype` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `yxt_coursetype` WHERE ( parent=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yxt_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `yxt_users` SET `avatar`='578f33655967f.jpg' WHERE `id` = '2' [ RunTime:0.0000s ]
+
+[ 2016-07-20T16:16:45+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=pic
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:16:50+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=setting
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:16:54+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=jihuo
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:17:03+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=pic
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:17:12+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=order
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+
+[ 2016-07-20T16:17:14+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=card
+NOTIC: D方法实例化没找到模型类Common\Model\OrderModel
+

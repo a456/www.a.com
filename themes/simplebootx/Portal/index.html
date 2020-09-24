@@ -1,0 +1,175 @@
+<tc_include file="Public:header" />       
+    <section class="poster hidden-xs">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+        <volist name="slide" id="vo" key="$key">
+          <if condition="$key eq 0">
+             <li data-target="#carousel" data-slide-to="{$key}" class="active"></li>
+          <else/>
+             <li data-target="#carousel" data-slide-to="{$key}" class=""></li>
+          </if>
+        </volist>  
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <volist name="slide" id="vo" key="$key">
+         <if condition="$key eq 0">
+            <div class="item active">
+             <a href="{$vo['slide_url']}" target="_self"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt="{$vo['slide_des']}"></a>
+            </div>
+          <else/>
+            <div class="item">
+             <a href="{$vo['slide_url']}" target="_self"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt="{$vo['slide_des']}"></a>
+            </div>
+         </if>
+        </volist>  
+      </div>
+       <a class="left carousel-control hidden-xs" href="#carousel" role="button" data-slide="prev">
+         <i class="iconfont icon-jiantou3 carousel-left"></i>
+       </a>
+       <a class="right carousel-control hidden-xs" href="#carousel" role="button" data-slide="next">
+         <i class="iconfont icon-jiantou4 carousel-right"></i>
+       </a>
+     </div>
+    </section>
+    <section class="index-course-list lazyload">
+      <div class="container">
+        <div class="es-filter">
+          <ul id="myTab" class="nav clearfix nav-pills">
+            <li class="active"><a href="#zuixin" data-toggle="tab">最新</a></li>
+            <li><a href="#tuijian" data-toggle="tab">推荐</a></li>
+            <li><a href="#free" data-toggle="tab">免费</a></li>
+          </ul>
+        </div>
+        <div id="myTabContent" class="tab-content">
+         <div class="tab-pane fade in active row item " id="zuixin">
+          <volist name="zx_courselist" id="vo">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+             <div class="course-item">
+                <div class="course-img">
+                  <a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}"><img class="transform img-responsive "  src="{$vo['cs_picture']}">
+                    <div class="course-show clearfix">
+                      <img src="./themes/simplebootx/public/images/1803026e1ab3793901.JPG" class="img-circle pull-left">
+                        <div class="pull-left">
+                          <p>{$vo['cs_name']}</p>
+                        </div>
+                     </div>
+                  </a>
+                 </div>
+                 <div class="course-info">
+                   <div class="title"><a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}">{$vo['cs_name']}</a></div>
+                    <div class="metas clearfix">
+                      <span class="score">评分：<em>0</em></span>
+                      <span class="num">1人在学</span>
+                      <span class="price price-num">¥{$vo['cs_price']}.00</span>                        
+                    </div>
+                  </div>
+                </div>
+              </div> 
+             </volist>       
+           </div>
+           <div class="tab-pane fade  item row item " id="tuijian">
+             <volist name="tuijian_courselist" id="vo"> 
+               <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="course-item">
+                 <div class="course-img">
+                  <a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}"><img class="transform img-responsive"  src="{$vo['cs_picture']}">
+                    <div class="course-show clearfix">
+                      <img src="./themes/simplebootx/public/images/1803026e1ab3793901.JPG" class="img-circle pull-left">
+                        <div class="pull-left">
+                          <h4>老师</h4>
+                          <p>{$vo['cs_name']}</p>
+                        </div>
+                     </div>
+                  </a>
+                 </div>
+                 <div class="course-info">
+                   <div class="title"><a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}">{$vo['cs_name']}</a></div>
+                    <div class="metas clearfix">
+                      <span class="score">评分：<em>0</em></span>
+                      <span class="num">1人在学</span>
+                      <span class="price price-num">¥{$vo['cs_price']}.00</span>                        
+                    </div>
+                  </div>
+                </div>
+               </div> 
+             </volist>   
+           </div>
+           <div class="tab-pane fade  item row item " id="free">
+             <volist name="free_courselist" id="vo"> 
+               <div class="col-lg-3 col-md-4 col-xs-6">
+                <div class="course-item">
+                 <div class="course-img">
+                  <a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}"><img class="transform img-responsive"  src="{$vo['cs_picture']}">
+                    <div class="course-show clearfix">
+                      <img src="./themes/simplebootx/public/images/1803026e1ab3793901.JPG" class="img-circle pull-left">
+                        <div class="pull-left">
+                          <h4>老师</h4>
+                          <p>{$vo['cs_name']}</p>
+                        </div>
+                     </div>
+                  </a>
+                 </div>
+                 <div class="course-info">
+                   <div class="title"><a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}">{$vo['cs_name']}</a></div>
+                    <div class="metas clearfix">
+                      <span class="score">评分：<em>0</em></span>
+                      <span class="num">1人在学</span>
+                      <span class="price price-num">¥{$vo['cs_price']}.00</span>                        
+                    </div>
+                  </div>
+                </div>
+               </div> 
+             </volist>   
+           </div>
+         </div>
+         
+      </div>
+      </section>
+     <section class="index-introduction hidden-xs">
+       <div id="carousel" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+        <volist name="mslide" id="vo" key="$key">
+          <if condition="$key eq 0">
+             <li data-target="#carousel" data-slide-to="{$key}" class="active"></li>
+          <else/>
+             <li data-target="#carousel" data-slide-to="{$key}" class=""></li>
+          </if>
+        </volist>  
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <volist name="mslide" id="vo" key="$key">
+         <if condition="$key eq 0">
+            <div class="item active">
+             <a href="{$vo['slide_url']}" target="_self"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt="{$vo['slide_des']}"></a>
+            </div>
+          <else/>
+            <div class="item">
+             <a href="{$vo['slide_url']}" target="_self"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt="{$vo['slide_des']}"></a>
+            </div>
+         </if>
+        </volist>  
+      </div>
+     </div>
+     </section>
+     <if condition="!empty($articlelist)">
+      <section class="group-dynamic clearfix">
+        <div class="container">
+         <volist name="articlelist" id="vo" key="k">
+           <div class="col-md-4">
+            <div class="course_sy2 ">
+                 <div class="opb1 opb3">{$vo['name']}<div class=" mor11"><a href="{:u('Portal/Index/article',array('termid'=>$vo['term_id']))}">更多&gt;</a></div></div>
+               <volist name="vo['voo']" id="sub" key="k"> 
+                 <if condition="$k==7">
+                  <div class="course_sy3b op3" style=" border-bottom:none;"><a href="{:u('Portal/Index/content',array('id'=>$vo['id'],'termid'=>$vo['term_id']))}" target="_blank" title="">{$sub['post_title']}</a></div>
+        	     <else/>
+        	       <div class="course_sy3b op3"><a href="{:u('Portal/Index/content',array('id'=>$sub['id'],'termid'=>$sub['term_id']))}" target="_blank" title="">{$sub['post_title']}</a></div>	
+        	     </if>
+        	   </volist>
+        	</div>
+           </div>
+          </volist>  
+        </div>
+      </section>
+     </if>
+<tc_include file="Public:scripts" />
+<tc_include file="Public:footer" />

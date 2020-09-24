@@ -1,0 +1,35 @@
+<tc_include file="Public:header" />
+<div id="wrapper" class="pad-bottom">
+   <div id="content-container" class="container">
+<div class="es-section login-section">
+  <div class="logon-tab clearfix">
+    <a href="{:u('User/Login/index')}">登录帐号</a>
+    <a class="active">注册帐号</a>
+  </div>
+  <div class="login-main">
+      <form class="form-horizontal js-ajax-form" action="{:U('user/register/doregister')}" method="post">
+		   <label class="control-label required" for="register_emailOrmobile">手机</label>
+	       <div class="control-group" style="margin-bottom:10px;">
+			 <input type="text" name="mobile" placeholder="手机号" class="form-control input-lg span4">
+		   </div>
+		   <label class="control-label required" for="register_password">密码</label>
+		   <div class="control-group" style="margin-bottom:10px;">
+			 <input type="password" name="password" placeholder="密码" class="form-control input-lg span4">
+		   </div>
+		   <label class="control-label required" for="register_verify">验证码</label>
+			  <div class="control-group" style="margin-bottom:10px;">
+				<div class="span4" style="margin-left: 0px;margin-bottom:10px;">
+				  <input type="text" name="verify" placeholder="验证码" style="width:210px;float:left;margin-right:5px;" class="form-control input-lg span4">
+					{:sp_verifycode_img('length=4&font_size=14&width=115&height=34&charset=1234567890&use_noise=1&use_curve=0')}
+				</div>
+			  </div>			  
+			  <div class="control-group">
+				<button class="btn btn-primary js-ajax-submit btn-lg btn-block" type="submit" data-wait="1500" style="margin-left: 0px;margin-top:30px;">确定注册</button>
+			  </div>
+		</form>
+     </div>
+    </div>
+   </div>
+  </div>
+<tc_include file="Public:scripts" />
+<tc_include file="Public:footer" />  

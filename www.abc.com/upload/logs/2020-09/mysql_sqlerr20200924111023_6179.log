@@ -1,0 +1,14 @@
+【错误SQL】
+SELECT `name`,`value`,`id`,`optdt` FROM oa_option WHERE `num`='reimtitlesystem' LIMIT 1
+
+【原因】
+Table 'oa.oa_option' doesn't exist
+
+【URL】
+http://www.abc.com/index.php?a=gettotal&m=index&d=home&atype=&loadci=2&optdt=2020-09-24%2011:06:31&nums=kjrk,gong,kqdk,apply,meet,officic,syslog,about&ajaxbool=true&rnd=475255
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0

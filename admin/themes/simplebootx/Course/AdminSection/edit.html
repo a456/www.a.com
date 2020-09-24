@@ -1,0 +1,33 @@
+<admintpl file="header" />
+<body class="J_scroll_fixed">
+	<div class="wrap J_check_wrap">
+	 <form class="form-horizontal js-ajax-form" name="myform" id="myform" action="{:u('AdminSection/edit_post')}" method="post">
+		<div class="form-group" style="margin-bottom:10px;">
+           <label>课件名称</label>
+           <input type="hidden" name="id" value="{$section['id']}" />
+           <input type="text" style="width:400px;" name="sc_name" id="sc_name"   value="{$section['sc_name']}" style="color:" class="input input_hd J_title_color" placeholder="课件标题" />       
+        </div>
+       <div class="form-group" style="margin-bottom:10px;">
+           <label>所属课程</label>
+           <select name="cs_id">
+		    <volist name="course" id="vo">
+			   <option value="{$vo['id']}"<eq name="section.cs_id" value="$vo['id']">selected="selected"</eq>>{$vo['cs_name']}</option>
+		    </volist>
+		  </select>
+       </div>
+       <div class="form-group" style="margin-bottom:10px;">
+           <label>播放时长</label>
+           <input type='text' name='sc_time' id='sc_time'  value="{$section.sc_time}" style='width:400px;' class='input' >
+       </div>      
+       <div class="form-group" style="margin-bottom:10px;">
+           <label>视频地址</label>
+           <input type='text' name='yun_url' id='yun_url' value="{$section.yun_url}"  style='width:400px;'   class='input' >
+       </div>
+       <div style="margin-top:40px;">
+       	 <button class="btn btn-primary js-ajax-submit"type="submit">提交</button>
+       </div>
+	</form>
+	</div>
+	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

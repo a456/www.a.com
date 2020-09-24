@@ -1,0 +1,43 @@
+<if condition="$isbuy==1 or $lession['is_free']==1">
+<div  id="a1">
+
+</div>
+<p class="text-center">{$lession['sc_name']}</p>
+<div class="modal-footer">
+<form class="form-paytype js-ajax-form" method="post" action="{:u('course/Course/studied')}">
+ <input type="hidden" name="sc_id" value="{$lession['id']}">
+ <input type="hidden" name="cs_id" value="{$lession['cs_id']}">
+<button type="submit" class="btn btn-default js-ajax-submit">我学完了</button>
+<button type="button"  class="btn btn-default" data-dismiss="modal">关闭</button>
+</form>
+</div>
+<script type="text/javascript" src="themes/simplebootx/Public/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var flashvars={
+        f:'{$lession['yun_url']}',
+        s:0,
+        c:0,
+        p:1,
+        h:4
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4'];
+    CKobject.embed('themes/simplebootx/Public/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','300',false,flashvars,video,params);
+</script>
+
+ <else/>
+<div class="modal-header">
+<a class="close" data-dismiss="modal">×</a>
+</div>
+<div class="modal-body">
+<p>您还没购买此课程，无法观看学习！</p>		        
+</div>
+<div class="modal-footer">
+<a href="#" class="btn btn-success" data-dismiss="modal">关闭</a>
+</div>
+</if>  
+<script type="text/javascript">
+   $('#myModal').on('hidden.modal', function (e) {
+    $(this).removeData("modal");
+   });
+ </script>

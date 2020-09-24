@@ -1,0 +1,121 @@
+<admintpl file="header" />
+<style>
+.home_info li em {
+	float: left;
+	width: 120px;
+	font-style: normal;
+}
+li {
+	list-style: none;
+}
+.admin_info1 {
+    height: 250px;
+    width:24%;
+    float: left;
+    margin: 10px 0px;
+    border: 1px #dddddd solid;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #fff;
+}
+.opb1 {
+    width: 100%;
+    float: left;
+    display: block;
+    font-size: 16px;
+    padding: 10px 0;
+    color: #82d896;
+    border-bottom: 1px #dddddd solid;
+    border-radius: 4px 4px 0px 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius:4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.opb3 {
+    background:  #eaeaea ;
+}
+.admin_info2 {
+    width: 100%;
+    float: left;
+    display: block;
+    text-indent: 15px;
+    font-size: 14px;
+    padding: 14px 0;
+    position: relative;
+}
+
+.kong{
+    width:9px;
+    height:200px;
+    float:left;
+}
+</style>
+</head>
+<body>
+   <div class="wrap">
+         <div class="home_info">
+			<ul id="notices">
+
+			</ul>
+		</div>
+         <div class="col-md-3">
+            <div class="admin_info1 ">
+              <div class="opb1 opb3 text-center">课程统计</div>
+              <div class="admin_info2">总课程数：{$t_course}</div> 
+              <div class="admin_info2">本日新增：{$d_course}</div>  
+              <div class="admin_info2">本周新增：{$z_course}</div> 
+              <div class="admin_info2">本月新增：{$y_course}</div>        	 
+        	</div>
+         </div><div class="kong"></div>
+         <div class="col-md-3">	 
+            <div class="admin_info1">
+               <div class="opb1 opb3 text-center">学员统计</div>
+               <div class="admin_info2">学员总数：{$t_user}</div>	
+   	           <div class="admin_info2">本日新增：{$d_user}</div>  
+              <div class="admin_info2">本周新增：{$z_user}</div> 
+              <div class="admin_info2">本月新增：{$y_user}</div>  
+        	</div>
+        </div> <div class="kong"></div>  
+        <div class="col-md-3">
+            <div class="admin_info1">
+               <div class="opb1 opb3 text-center">订单统计</div>
+            
+               <div class="admin_info2">订单总数：{$t_order}</div>	
+       	       <div class="admin_info2">本日新增：{$d_order}</div>
+               <div class="admin_info2">已支付订单：{$order_1}</div>
+               <div class="admin_info2">未支付订单：{$order_2}</div>  
+        	 
+        	</div>
+      	</div> <div class="kong"></div> 
+         <div class="col-md-4">
+            <div class="admin_info1">
+               <div class="opb1 opb3 text-center">文章统计</div>
+            
+               <div class="admin_info2">文章总数：{$t_article}</div>	
+       	       <div class="admin_info2">本日新增：{$d_article}</div>
+               <div class="admin_info2">本周新增：{$z_article}</div> 
+               <div class="admin_info2">本月新增：{$y_article}</div>  
+        	</div>
+      	</div>
+        <div class="col-md-12">
+            <div class="admin_info1" style="height: 450px;width:100%">
+               <div class="opb1 opb3 text-center">服务器信息[莎莎源码倾情奉献 bbs.sasadown.cn]</div>
+               <volist name="server_info" id="vo">
+                <div class="admin_info2">{$key}：<span>{$vo}</span></div> 
+               </volist>
+        	</div>
+      	</div>
+        
+ 
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	
+	
+</body>
+</html>

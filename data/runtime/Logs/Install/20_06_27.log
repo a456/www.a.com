@@ -1,0 +1,57 @@
+[ 2020-06-27T16:24:38+08:00 ] 127.0.0.1 /index.php?g=install&a=step4
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2020-06-27T16:25:38+08:00 ] ::1 /index.php?g=install&a=testdbpwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001716s ]
+NOTIC: [8] Undefined index: db_name D:\phpstudy_pro\www\simplewind\Core\Library\Think\Db.class.php 第 68 行.
+SQL: show databases; [ RunTime:0.0993s ]
+
+[ 2020-06-27T16:25:59+08:00 ] ::1 /index.php?g=install&a=step4
+ERR: 1067:Invalid default value for 'createtime'
+ [ SQL语句 ] : CREATE TABLE `yxt_comments` (
+
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+
+  `post_table` varchar(100) NOT NULL COMMENT '评论内容所在表，不带表前缀',
+
+  `post_id` int(11) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(255) DEFAULT NULL COMMENT '原文地址',
+
+  `uid` int(11) NOT NULL DEFAULT '0' COMMENT '发表评论的用户id',
+
+  `to_uid` int(11) NOT NULL DEFAULT '0' COMMENT '被评论的用户id',
+
+  `full_name` varchar(50) DEFAULT NULL COMMENT '评论者昵称',
+
+  `email` varchar(255) DEFAULT NULL COMMENT '评论者邮箱',
+
+  `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+
+  `content` text NOT NULL COMMENT '评论内容',
+
+  `type` smallint(1) NOT NULL DEFAULT '1' COMMENT '评论类型；1实名评论',
+
+  `parentid` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '被回复的评论id',
+
+  `path` varchar(500) DEFAULT NULL,
+
+  `status` smallint(1) NOT NULL DEFAULT '1' COMMENT '状态，1已审核，0未审核',
+
+  PRIMARY KEY (`id`),
+
+  KEY `comment_post_ID` (`post_id`),
+
+  KEY `comment_approved_date_gmt` (`status`),
+
+  KEY `comment_parent` (`parentid`),
+
+  KEY `table_id_status` (`post_table`,`post_id`,`status`),
+
+  KEY `createtime` (`createtime`)
+
+) COLLATE='utf8_general_ci' ENGINE=MyISAM
+

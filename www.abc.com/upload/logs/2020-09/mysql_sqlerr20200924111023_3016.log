@@ -1,0 +1,14 @@
+【错误SQL】
+insert into `oa_log` set `type`='错误SQL',`ip`='127.0.0.1',`web`='Firefox',`optdt`='2020-09-24 11:10:23',`optid`='1',`optname`='管理员',`remark`='Table &#39;oa.oa_im_history&#39; doesn&#39;t exist',`url`='http://www.abc.com/index.php?a=gettotal&m=index&d=home&atype=&loadci=2&optdt=2020-09-24%2011:06:31&nums=kjrk,gong,kqdk,apply,meet,officic,syslog,about&ajaxbool=true&rnd=475255',`level`='2'
+
+【原因】
+Table 'oa.oa_log' doesn't exist
+
+【URL】
+http://www.abc.com/index.php?a=gettotal&m=index&d=home&atype=&loadci=2&optdt=2020-09-24%2011:06:31&nums=kjrk,gong,kqdk,apply,meet,officic,syslog,about&ajaxbool=true&rnd=475255
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0

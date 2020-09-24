@@ -1,0 +1,30 @@
+【错误SQL】
+insert into `oa_custfina` set `htid`='10',`htnum`='GC-【20304',`uid`='1',`custid`='317',`custname`='深圳市宝安区观澜投资管理公司',`dt`='2020-09-03',`optdt`='2020-09-03 18:20:18',`createdt`='2020-09-03 18:20:18',`optname`='管理员',`createname`='管理员',`createid`='1',`optid`='1',`type`='0',`explain`='111',`money`='2400'
+
+【原因】
+Unknown column 'optid' in 'field list'
+
+【URL】
+http://47.107.43.214/index.php?a=yyoptmenu&m=flowopt&d=flow&ajaxbool=true&rnd=567522
+
+【POST】
+[name]：创建收款单
+[statusvalue]：1
+[islog]：0
+[issm]：0
+[lx]：1
+[optnum]：cjdaishou
+[optmenuid]：26
+[color]：chocolate
+[num]：custract
+[mid]：10
+[modenum]：custract
+[smcont]：
+[logfileid]：
+[sm]：111
+
+【IP】
+116.25.41.48
+
+【浏览器】
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko

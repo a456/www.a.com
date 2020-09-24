@@ -1,0 +1,46 @@
+<admintpl file="header" />
+</head>
+<body style="min-width: 800px;">
+	<div class="wrap js-check-wrap">
+		
+		<form class="js-ajax-form" method="post">
+			
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th width="150">用户名</th>
+						<th>学习进度</th>
+						<th width="180">购买时间</th>
+					</tr>
+				</thead>
+				<foreach name="xueyuan" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}"></td>
+					<td>{$vo.id}</td>
+					<td>{$vo.user_id|getusername}</td>
+					<td> <div class="progress">
+                            <div class="progress-bar progress-bar-success" style="width: {$vo['bili']}%;"></div>
+                         </div>
+                    </td>
+					<td>{$vo.pingluntime}</td>
+				</tr>
+				</foreach>
+				<tfoot>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">ID</th>
+						<th width="150">用户名</th>
+						<th>学习进度</th>
+						<th width="180">购买时间</th>
+					</tr>
+				</tfoot>
+			</table>
+			
+			<div class="pagination">{$Page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

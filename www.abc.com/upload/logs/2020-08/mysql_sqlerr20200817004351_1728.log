@@ -1,0 +1,14 @@
+【错误SQL】
+SELECT `setid`,min(sort),`num` FROM oa_flow_where WHERE `setid` in(0,1,2,46,49,62,3,22,4,12,61,5,6,23,51,19,20,69,7,8,35,36,31,32,33,37,38,39,71,73,24,28,11,25,26,27,64,65,42,44,59,60,74,76,78) and `status`=1 and `islb` and `num` is not null and (ifnull(syrid,'')='' or instr(concat(',', syrid, ','), ',all,')>0 or instr(concat(',', syrid, ','), ',u9,')>0 or instr(concat(',', syrid, ','), ',d1,')>0 or instr(concat(',', syrid, ','), ',d5,')>0) and `pnum` is null group by `setid`
+
+【原因】
+Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'oa.oa_flow_where.num' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+
+【URL】
+http://www.abc.com/index.php?a=getmodesearcharr&m=fwork&d=main&ajaxbool=true&rnd=94412
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36

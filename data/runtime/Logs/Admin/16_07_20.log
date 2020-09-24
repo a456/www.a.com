@@ -1,0 +1,30 @@
+[ 2016-07-20T16:13:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=setting&a=site_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `yxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yxt_options` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: comment_time_interval D:\phpStudy\WWW\application\Admin\Controller\SettingController.class.php 第 65 行.
+SQL: SELECT * FROM `yxt_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `yxt_options` SET `option_id`='1',`option_name`='site_options',`option_value`='{\"site_name\":\"YxtCMF\\u7f51\\u7edc\\u8bfe\\u5802\\u838e\\u838e\\u7279\\u522b\\u7248\",\"site_host\":\"http:\\/\\/127.0.0.1\\/\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"mobile_tpl_enabled\":\"1\",\"site_adminstyle\":\"flat\",\"site_icp\":\"\",\"site_admin_email\":\"58888@qq.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"YxtCMF\\u7f51\\u7edc\\u8bfe\\u5802\",\"site_seo_keywords\":\"YxtCMF,\\u7f51\\u7edc\\u8bfe\\u5802\\uff0c\\u5fae\\u8bfe\\uff0c\\u7ffb\\u8f6c\\u8bfe\\u5802\",\"site_seo_description\":\"YxtCMF\\u662f\\u6613\\u5b66\\u5802\\u53d1\\u5e03\\u7684\\u4e00\\u6b3e\\u7528\\u4e8e\\u5feb\\u901f\\u5efa\\u7acb\\u7f51\\u6821\\u7684\\u5185\\u5bb9\\u7ba1\\u7406\\u6846\\u67b6\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"seller_email\":\"\",\"key\":\"\",\"partner\":\"\",\"notify_url\":\"http:\\/\\/www.xxx.com\\/index.php?g=course&m=Course&a=notifyurl\",\"return_url\":\"http:\\/\\/www.xxx.com\\/index.php?g=course&m=Course&a=returnurl\",\"successpage\":\"http:\\/\\/www.xxx.com\\/index.php?g=user&m=center&a=order\",\"errorpage\":\"http:\\/\\/www.xxx.com\\/index.php?g=user&m=center&a=order\",\"APPID\":\"\",\"SECRET_ID\":\"\",\"SECRET_KEY\":\"\",\"DOMAIN\":\"\",\"comment_time_interval\":0}' WHERE ( option_name='site_options' ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yxt_options` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `yxt_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `yxt_options` (`option_name`,`option_value`) VALUES ('cmf_settings','{\"banned_usernames\":\"\"}') [ RunTime:0.0000s ]
+
+[ 2016-07-20T16:14:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=plugin&a=install&name=Demo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `yxt_users` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `yxt_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yxt_plugins` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `yxt_plugins` [ RunTime:0.0090s ]
+SQL: SELECT `config` FROM `yxt_plugins` WHERE `name` = 'Demo' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: theme D:\phpStudy\WWW\application\Common\Lib\Plugin.class.php 第 67 行.
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `yxt_plugins` (`name`,`title`,`description`,`status`,`author`,`version`,`hooks`,`has_admin`,`config`) VALUES ('Demo','插件演示','插件演示','1','ThinkCMF','1.0','footer','1','{\"text\":\"hello,ThinkCMF!\",\"password\":\"\",\"select\":\"1\",\"checkbox\":1,\"radio\":\"1\",\"textarea\":\"\\u8fd9\\u91cc\\u662f\\u4f60\\u8981\\u586b\\u5199\\u7684\\u5185\\u5bb9\"}') [ RunTime:0.0000s ]
+

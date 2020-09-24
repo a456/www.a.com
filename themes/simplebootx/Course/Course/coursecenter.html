@@ -1,0 +1,67 @@
+<tc_include file="Public:header" />  
+ <section class="index-course-list lazyload">
+   <div  class="container">
+    <ol class="breadcrumb breadcrumb-o">
+        <li><a href="/">首页</a></li>
+        <li class="active"><a href="">{$topname['name']}</a></li>
+        <li class="active">{$tyname['name']}</li>
+    </ol>
+   <if condition="!empty($label)">
+     <div class="es-tabs">
+        
+       <div class="tab-header">
+          
+         <if condition="empty($label_id)">
+           <ul class="clearfix" id="lab1">
+               <li class="active" ><a href="{:u('course/Course/coursecenter',array('typeid'=>$typeid))}">全部</a></li>
+             <volist name="label" id="vo" key="key">
+               <li class=""><a href="{:u('course/Course/coursecenter',array('typeid'=>$typeid,'labelid'=>$vo['id']))}">{$vo['labelname']}</a></li>
+             </volist> 
+           </ul>
+          <else/> 
+            <ul class="clearfix" id="lab1">
+               <li><a href="{:u('course/Course/coursecenter',array('typeid'=>$typeid))}">全部</a></li>
+             <volist name="label" id="vo" key="key">
+              <if condition="$vo['id']==$label_id">
+               <li class="active" id="$vo['id']"><a href="{:u('course/Course/coursecenter',array('typeid'=>$typeid,'labelid'=>$vo['id']))}">{$vo['labelname']}</a></li>
+              <else/>
+               <li class="" id="$vo['id']"><a href="{:u('course/Course/coursecenter',array('typeid'=>$typeid,'labelid'=>$vo['id']))}">{$vo['labelname']}</a></li>
+              </if>
+             </volist> 
+           </ul>
+          </if>
+       </div>
+     </div>
+     <else/>
+     </if>
+      <div class="course-list">
+         <div class="row">
+          <volist name="csdata" id="vo"> 
+             <div class="col-lg-3 col-md-4 col-xs-6">
+               <div class="course-item">
+                 <div class="course-img">
+                    <a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}" target="_blank"><img  alt="{$vo['cs_name']}" class="img-responsive" src="{$vo['cs_picture']}"/></a>
+                 </div>
+                 <div class="course-info" style="margin-bottom:10px;">
+                   <div class="title"><a href="{:u('course/Course/courseinfo',array('id'=>$vo['id']))}">{$vo['cs_name']}</a></div>
+                    <div class="metas clearfix">
+                      <span class="score">评分：<em>0</em></span>
+                      <span class="num">1人在学</span>
+                      <if condition="$vo['cs_price'] neq 1">
+                        <span class="price  price-num ">免费</span>
+                      <else/>
+                        <span class="price price-num">¥{$vo['cs_price']}.00</span> 
+                      </if>                           
+                    </div>
+                  </div>
+                </div>          
+              </div>
+            </volist>   
+		   
+          </div>
+       </div>
+      <nav class="text-center"><div class="pagination text-center">{$Page}</div></nav>
+   </div>
+ </section>
+ <tc_include file="Public:scripts" />
+<tc_include file="Public:footer" />

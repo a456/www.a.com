@@ -1,0 +1,30 @@
+【错误SQL】
+select * from oa_project where 1=1    and `optid`='9'      order by  base_deptname desc    limit 0,15
+
+【原因】
+Unknown column 'base_deptname' in 'order clause'
+
+【URL】
+http://47.107.43.214/index.php?a=publicstore&m=mode_project|input&d=flow&modeid=76&ajaxbool=true&rnd=172438&pnum=
+
+【POST】
+[tablename_abc]：ii0mb0mt0qqg0im0qdi0gu0qdu0qdd0ua0ag0ag06
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：base_deptname
+[dir]：desc
+[loadci]：2
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：project
+[start]：0
+[page]：1
+[limit]：15
+[atype]：mycj
+
+【IP】
+113.118.227.170
+
+【浏览器】
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.14(0x17000e2e) NetType/WIFI Language/zh_CN
