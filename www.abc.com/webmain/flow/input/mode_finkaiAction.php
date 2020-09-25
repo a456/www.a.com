@@ -26,5 +26,28 @@ class mode_finkaiClassAction extends inputAction{
 	protected function saveafter($table, $arr, $id, $addbo){
 		
 	}
+    public function hetongdata()
+    {
+        $htid = 0;
+        $mid  = (int)$this->get('mid','0');
+        if($mid>0){
+            $htid = (int)$this->flow->getmou('htid', $mid); //当前记录也要显示合同ID
+        }
+        $rows = m('crm')->getmyract($this->adminid, $htid);
+        $arr  = array();
+        foreach($rows as $k=>$rs){
+            $arr[] = array(
+                'value' => $rs['id'],
+                'name' 	=> '['.$rs['num'].']'.$rs['contract_name'],
+            );
+        }
+        return $arr;
+    }
+    public function ractchangeAjax()
+    {
+        $htid 	= (int)$this->get('ractid');
+        $cars 	= m('custract')->getone($htid, 'id,settlement_price');
+        $this->returnjson($cars);
+    }
 }	
 			

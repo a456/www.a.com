@@ -32,6 +32,13 @@ class crmClassModel extends Model
 		$rows 	= m('custract')->getrows($where, 'id,custid,custname,money,num,contract_name');
 		return $rows;
 	}
+    //读取发票合同
+    public function getinvoice($uid, $id=0)
+    {
+        $where 	= '`uid`='.$uid;
+        $rows 	= m('custract')->getrows($where, 'id,custid,custname,money,num,contract_name');
+        return $rows;
+    }
 	
 	//更新合同状态
 	public function ractmoney($htid)
