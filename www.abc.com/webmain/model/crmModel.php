@@ -26,19 +26,16 @@ class crmClassModel extends Model
 	}
 	
 	//读取我的合同
-	public function getmyract($uid, $id=0)
+	public function getmyract($uid, $id=0,$isover=true)
 	{
-		$where 	= '`uid`='.$uid.' and (`isover`=0 or `id`='.$id.')';
+	    if($isover == true){
+            $where 	= '`uid`='.$uid.' and (`isover`=0 or `id`='.$id.')';
+        }else{
+            $where 	= '`uid`='.$uid;
+        }
 		$rows 	= m('custract')->getrows($where, 'id,custid,custname,money,num,contract_name');
 		return $rows;
 	}
-    //读取发票合同
-    public function getinvoice($uid, $id=0)
-    {
-        $where 	= '`uid`='.$uid;
-        $rows 	= m('custract')->getrows($where, 'id,custid,custname,money,num,contract_name');
-        return $rows;
-    }
 	
 	//更新合同状态
 	public function ractmoney($htid)

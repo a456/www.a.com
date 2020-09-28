@@ -751,7 +751,7 @@
 			fieldsafteraction:'', 	//编辑单元格时保存后触发
 			data:[],				//初始数据
 			autoLoad:true,			//是否初始化后就加载
-			tree:false,				//是否树形显示
+			tree:true,				//是否树形显示
 			itemdblclick:function(){},	//双击行调用
 			searchwidth:500,  //没用
 			defaultorder:'', //默认排序

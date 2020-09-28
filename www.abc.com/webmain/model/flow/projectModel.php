@@ -7,6 +7,13 @@ class flow_projectClassModel extends flowModel
 	
 	public function initModel()
 	{
+	    $this->projectt = array('市政','房建','公路','轨道','圆林绿化');//项目类别
+	    $this->businesst = array('概算','预算','控制价','变更签证','结算','财务决算','期中支付','全过程','跟踪审计','框架协议');// 业务类别
+	    $this->jobst = array('编制','审核');// 工作类别
+	    $this->area = array('珠海','深圳','东莞','广州','广东','中山','惠州','厦门','安徽','西安','阳江');// 工作类别
+	    $this->is_bidding = array('否','是');//  是否公开招标
+	    $this->is_free = array('否','是');//  是否公开招标
+	    $this->status = array('待执行','已完成','执行中');//  是否公开招标
 		$this->workobj = m('work');
 	}
 	
@@ -22,6 +29,25 @@ class flow_projectClassModel extends flowModel
 	}
 	
 	public function flowrsreplace($rs, $slx=0){
+        if(isset($this->projectt[$rs['projectt']])){
+            $rs['projectt'] = $this->projectt[$rs['projectt']];
+        }
+        if(isset($this->businesst[$rs['businesst']])){
+            $rs['businesst'] = $this->businesst[$rs['businesst']];
+        }
+        if(isset($this->jobst[$rs['jobst']])){
+            $rs['jobst'] = $this->jobst[$rs['jobst']];
+        }
+        if(isset($this->area[$rs['area']])){
+            $rs['area'] = $this->area[$rs['area']];
+        }
+        if(isset($this->is_bidding[$rs['is_bidding']])){
+            $rs['is_bidding'] = $this->is_bidding[$rs['is_bidding']];
+        }
+        if(isset($this->is_free[$rs['is_free']])){
+            $rs['is_free'] = $this->is_free[$rs['is_free']];
+        }
+
 		$zts 		= $rs['status'];
 		$str 		= $this->getstatus($rs,'','',1);
 		$rs['status']= $str;
