@@ -38,7 +38,7 @@ class mode_finkaiClassAction extends inputAction{
         foreach($rows as $k=>$rs){
             $arr[] = array(
                 'value' => $rs['id'],
-                'name' 	=> '['.$rs['num'].']'.$rs['contract_name'],
+                'name' 	=> $rs['num'],
             );
         }
         return $arr;
@@ -46,7 +46,8 @@ class mode_finkaiClassAction extends inputAction{
     public function ractchangeAjax()
     {
         $htid 	= (int)$this->get('ractid');
-        $cars 	= m('custract')->getone($htid, 'id,settlement_price');
+        $cars 	= m('custract')->getone($htid, 'id,settlement_price,contract_name,money,settlement_price,contract_adjustment,num');
+        $cars['accumulative'] = m('fininfom')->contractcost($htid)[0]['money'];
         $this->returnjson($cars);
     }
 }	

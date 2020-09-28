@@ -49,6 +49,12 @@ class mode_custractClassAction extends inputAction{
 		}
 	}
 
+    public function ractchangeAjax()
+    {
+        $htid 	= (int)$this->get('ractid');
+        $cars = m('fininfom')->contractcost($htid)[0]['money'];
+        $this->returnjson($cars);
+    }
 	public function remoneyAjax()
 	{
 		m('crm')->custractupzt();

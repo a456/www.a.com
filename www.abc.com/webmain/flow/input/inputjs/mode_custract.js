@@ -1,4 +1,7 @@
 function initbodys(){
+	if(form('id').value != 0){
+		ractchange(form('id').value);
+	}
 	$(form('custid')).change(function(){
 		var val = this.value,txt='';
 		if(val!=''){
@@ -7,10 +10,14 @@ function initbodys(){
 		form('custname').value=txt;
 		form('saleid').value = '';
 	});
-	
 	$(form('saleid')).change(function(){
 		salechange(this.value);
 	});
+}
+function ractchange(v){
+	js.ajax(geturlact('ractchange'),{ractid:v},function(a){
+		form('accumulative').value=a;
+	},'get,json');
 }
 function salechange(v){
 	if(v==''){

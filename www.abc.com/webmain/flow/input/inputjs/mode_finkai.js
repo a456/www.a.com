@@ -1,13 +1,21 @@
 //流程模块【finkai.开票申请】下录入页面自定义js页面,初始函数
 function initbodys(){
-	c.onselectdata['num'] = function(d){
-		salechange(d.value);
+
+	c.onselectdata['numselect'] = function(d){
+		salechange(form('num').value);
+	}
+	if(form('num').value != ''){
+		salechange(form('num').value);
 	}
 }
 function salechange(v){
 	js.ajax(geturlact('ractchange'),{ractid:v},function(a){
-		form('money').value=a.settlement_price;
-
+		form('numselect').value=a.num;
+		form('fullname').value=a.contract_name;
+		form('moneys').value=a.money;
+		form('settlement_price').value=a.settlement_price;
+		form('contract_adjustment').value=a.contract_adjustment;
+		form('accumulative').value=a.accumulative;
 	},'get,json');
 }
 function changesubmit(){

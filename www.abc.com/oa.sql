@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2020-09-28 11:25:03
+Date: 2020-09-28 16:49:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -67,7 +67,7 @@ CREATE TABLE `oa_admin` (
 -- ----------------------------
 -- Records of oa_admin
 -- ----------------------------
-INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2026', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '深圳广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-09-28 11:22:27', '1');
+INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2029', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '深圳广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-09-28 16:47:36', '1');
 INSERT INTO `oa_admin` VALUES ('2', null, 'diaochan', '貂蝉', 'e10adc3949ba59abbe56e057f20f883e', '70', '1', '0', '女', null, 'upload/face/2.jpg', '3', '财务部', null, null, null, '深圳广诚开发团队/财务部', '5', '诸葛亮', '财务总监', '0', '[1],[3]', '[5]', null, '15800000007', '1', '2016-08-09', null, null, null, null, null, '0', 'diaochan', null, '2', '0', '2020-09-25 18:11:43', '1');
 INSERT INTO `oa_admin` VALUES ('3', null, 'xiaoqiao', '小乔', 'e10adc3949ba59abbe56e057f20f883e', '123', '1', '0', '女', null, 'upload/face/3.jpg', '3', '财务部', null, null, null, '深圳广诚开发团队/财务部', '2', '貂蝉', '出纳', '0', '[1],[3]', '[5],[2]', null, '15800000001', '1', '2017-05-02', null, '2016-08-30 20:34:23', null, null, null, '0', 'xiaoqiao', null, '2', '0', '2020-09-26 16:05:25', '1');
 INSERT INTO `oa_admin` VALUES ('4', null, 'daqiao', '大乔', 'e10adc3949ba59abbe56e057f20f883e', '196', '1', '0', '女', null, 'upload/face/4.jpg', '4', '行政人事部', null, null, null, '深圳广诚开发团队/行政人事部', '5', '诸葛亮', '人事主管', '0', '[1],[4]', '[5]', null, '15800000002', '1', '2017-07-01', null, '2016-10-20 22:27:51', null, null, null, '0', 'daqiao', null, '2', '0', null, '1');
@@ -779,7 +779,7 @@ CREATE TABLE `oa_custract` (
   `custid` int(11) DEFAULT '0' COMMENT '客户id',
   `custname` varchar(255) DEFAULT NULL COMMENT '客户名称',
   `linkman` varchar(20) DEFAULT NULL COMMENT '客户联系人',
-  `money` decimal(10,2) DEFAULT '0.00' COMMENT '合同金额',
+  `money` decimal(10,2) DEFAULT '0.00' COMMENT '合同价',
   `moneys` decimal(10,2) DEFAULT '0.00' COMMENT '待收金额',
   `startdt` date DEFAULT NULL COMMENT '合同工期从',
   `enddt` date DEFAULT NULL COMMENT '合同工期至',
@@ -3093,7 +3093,7 @@ CREATE TABLE `oa_fininfom` (
   `address` varchar(100) DEFAULT NULL COMMENT '公司地址',
   `tel` varchar(50) DEFAULT NULL COMMENT '电话',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='费用报销';
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='费用报销';
 
 -- ----------------------------
 -- Records of oa_fininfom
@@ -3110,6 +3110,9 @@ INSERT INTO `oa_fininfom` VALUES ('10', '4', '1', '50.00', null, '2017-08-07 20:
 INSERT INTO `oa_fininfom` VALUES ('11', '5', '1', '5600.00', null, '2017-08-07 21:11:16', '1', '管理员', '2017-08-07', null, '1', '1', null, '增值税普通发票', '深圳广诚开发团队', '62265333333', '招商银行', null, null, '2017-08-07', null, '合同开票', '3500000000', '北京软件园', '010-1234667');
 INSERT INTO `oa_fininfom` VALUES ('12', '5', '1', '12.00', null, '2020-09-25 18:09:16', '1', '管理员', '2020-09-25', null, '1', '1', null, '增值税专用发票', '深圳广诚开发团队', '62265333333', '63520320436210434', null, null, '2020-09-25', null, '项目合同', '11111', 'das', '15507470940');
 INSERT INTO `oa_fininfom` VALUES ('13', '5', '1', '11.00', null, '2020-09-25 18:13:44', '1', '管理员', '2020-09-25', null, '1', '1', null, '增值税专用发票', '深圳广诚开发团队123456', '62265333333', '阿里巴巴', null, null, '2020-09-25', null, '到账登记', '11111', '罗湖区掌声但是111', '15507470943');
+INSERT INTO `oa_fininfom` VALUES ('14', '5', '1', '2000.00', null, '2020-09-28 15:50:59', '1', '管理员', '2020-09-28', null, '0', '1', null, '定额发票', '国际低碳城启动区市政工程', null, null, null, null, '2020-09-28', '3072', 'P计划', null, null, null);
+INSERT INTO `oa_fininfom` VALUES ('15', '5', '1', '2000.00', null, '2020-09-28 16:09:10', '1', '管理员', '2020-09-28', null, '0', '1', null, '定额发票', '国际低碳城启动区市政工程', null, null, null, null, '2020-09-28', '3072', 'O计划', null, null, null);
+INSERT INTO `oa_fininfom` VALUES ('16', '5', '1', '2000.00', null, '2020-09-28 16:27:00', '1', '管理员', '2020-09-28', null, '0', '1', null, '增值税普通发票', '深圳市罗湖区', null, null, null, null, '2020-09-28', null, 'L计划', null, null, null);
 
 -- ----------------------------
 -- Table structure for oa_fininfos
@@ -3176,7 +3179,7 @@ CREATE TABLE `oa_flow_bill` (
   KEY `sericnum` (`sericnum`),
   KEY `table` (`table`,`mid`) USING BTREE,
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=123 DEFAULT CHARSET=utf8 COMMENT='流程单据';
+) ENGINE=MyISAM AUTO_INCREMENT=127 DEFAULT CHARSET=utf8 COMMENT='流程单据';
 
 -- ----------------------------
 -- Records of oa_flow_bill
@@ -3269,6 +3272,10 @@ INSERT INTO `oa_flow_bill` VALUES ('116', 'GA-20171023-0001', 'official', '4', '
 INSERT INTO `oa_flow_bill` VALUES ('120', 'WB-20171113-0001', 'goodm', '4', '28', '物品采购', '管理员', '1', '开发部', '2017-11-13 14:20:47', '1', '管理员', '4,5', '0', '1', '2017-11-13', '大乔处理同意', '1', '0', null, null, null, '2017-11-13 14:21:23', '2017-11-13 14:20:47', '0', '1');
 INSERT INTO `oa_flow_bill` VALUES ('121', 'FF-20200925-0001', 'fininfom', '12', '65', '开票申请', '管理员', '1', '开发部', '2020-09-25 18:09:16', '1', '管理员', '1,3,2,5', '0', '1', '2020-09-25', '管理员处理已到账', '1', '0', null, null, null, '2020-09-25 18:12:27', '2020-09-25 18:09:16', '0', '1');
 INSERT INTO `oa_flow_bill` VALUES ('122', 'FF-20200925-0002', 'fininfom', '13', '65', '开票申请', '管理员', '1', '开发部', '2020-09-25 18:13:44', '1', '管理员', '1', '0', '1', '2020-09-25', '管理员处理已到账', '1', '0', null, null, null, '2020-09-25 18:14:15', '2020-09-25 18:13:44', '0', '1');
+INSERT INTO `oa_flow_bill` VALUES ('123', 'XW-20200928-0001', 'work', '6', '4', '任务', '管理员', '1', '开发部', '2020-09-28 14:34:00', '1', '管理员', '1', '0', '0', '2020-09-28', '待管理员处理', '3', '52', '1', '管理员', null, '2020-09-28 14:34:00', '2020-09-28 14:34:00', '0', '1');
+INSERT INTO `oa_flow_bill` VALUES ('124', 'FF-20200928-0001', 'fininfom', '14', '65', '开票申请', '管理员', '1', '开发部', '2020-09-28 15:50:59', '1', '管理员', '1', '0', '0', '2020-09-28', '待管理员处理', '0', '64', '1', '管理员', null, '2020-09-28 15:50:59', '2020-09-28 15:38:47', '0', '1');
+INSERT INTO `oa_flow_bill` VALUES ('125', 'FF-20200928-0002', 'fininfom', '15', '65', '开票申请', '管理员', '1', '开发部', '2020-09-28 16:09:10', '1', '管理员', '1', '0', '0', '2020-09-28', '待管理员处理', '0', '64', '1', '管理员', null, '2020-09-28 16:09:10', '2020-09-28 16:09:10', '0', '1');
+INSERT INTO `oa_flow_bill` VALUES ('126', 'FF-20200928-0003', 'fininfom', '16', '65', '开票申请', '管理员', '1', '开发部', '2020-09-28 16:27:00', '1', '管理员', '1', '0', '0', '2020-09-28', '待管理员处理', '0', '64', '1', '管理员', null, '2020-09-28 16:27:00', '2020-09-28 16:27:00', '0', '1');
 
 -- ----------------------------
 -- Table structure for oa_flow_chao
@@ -3491,7 +3498,7 @@ CREATE TABLE `oa_flow_element` (
   PRIMARY KEY (`id`),
   KEY `mid` (`mid`),
   KEY `fields` (`fields`)
-) ENGINE=MyISAM AUTO_INCREMENT=799 DEFAULT CHARSET=utf8 COMMENT='模块元素';
+) ENGINE=MyISAM AUTO_INCREMENT=807 DEFAULT CHARSET=utf8 COMMENT='模块元素';
 
 -- ----------------------------
 -- Records of oa_flow_element
@@ -3762,7 +3769,7 @@ INSERT INTO `oa_flow_element` VALUES ('267', '35', '客户号', 'custid', 'text'
 INSERT INTO `oa_flow_element` VALUES ('268', '35', '客户名称', 'custname', 'selectdatafalse', '1', null, '1', 'selectcust,custid', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('269', '35', '销售机会', 'saleid', 'select', '40', null, '0', 'selectsale', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('270', '35', '签约日期', 'signdt', 'datetime', '15', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('271', '35', '合同金额', 'money', 'number', '8', '0', '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('271', '35', '合同价', 'money', 'number', '8', '0', '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('272', '35', '合同工期从', 'startdt', 'datetime', '13', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '1', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('273', '35', '合同工期至', 'enddt', 'datetime', '14', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('274', '35', '合同内容', 'content', 'textarea', '41', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
@@ -4070,14 +4077,14 @@ INSERT INTO `oa_flow_element` VALUES ('610', '65', '类型', 'type', 'fixed', '0
 INSERT INTO `oa_flow_element` VALUES ('612', '65', '开票金额', 'money', 'number', '2', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '1', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('613', '65', '开票日期', 'paydt', 'date', '3', '{date}', '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('614', '65', '公司单位名称', 'fullname', 'text', '4', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, '填写需要开票公司/单位全称', '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('615', '65', '纳税识别号', 'shibieid', 'text', '7', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('616', '65', '开户行', 'openbank', 'text', '8', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('617', '65', '开户帐号', 'cardid', 'text', '9', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('615', '65', '纳税识别号', 'shibieid', 'text', '7', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('616', '65', '开户行', 'openbank', 'text', '8', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('617', '65', '开户帐号', 'cardid', 'text', '9', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('618', '65', '开票类型', 'paytype', 'rockcombo', '10', null, '1', 'openpiaotype', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('619', '65', '说明', 'explain', 'textarea', '12', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('620', '65', '公司地址', 'address', 'text', '5', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '1', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('621', '65', '联系电话', 'tel', 'text', '6', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('622', '65', '相关单号', 'num', 'selectdatafalse', '11', null, '0', 'hetongdata', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, '可填写合同号/订单号', '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('620', '65', '公司地址', 'address', 'text', '5', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '1', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('621', '65', '联系电话', 'tel', 'text', '6', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('622', '65', '相关单号', 'numselect', 'selectdatafalse', '11', null, '0', 'hetongdata,num', '0', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, '可填写合同号/订单号', '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('623', '53', '性别', 'sex', 'select', '0', null, '1', '男,女', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('624', '66', '对应模块', 'setid', 'text', '0', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('625', '66', '通知内容摘要', 'summary', 'textarea', '10', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
@@ -4250,6 +4257,12 @@ INSERT INTO `oa_flow_element` VALUES ('793', '22', '工时', 'workingh', 'number
 INSERT INTO `oa_flow_element` VALUES ('794', '22', '登记日期', 'registert', 'datetime', '42', null, '0', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('795', '22', '累计工时', 'grandt', 'number', '43', null, '0', null, '1', '1', 'readonly', '0', '0', null, null, '15', null, '1', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('798', '22', '所属项目', 'pid', 'select', '0', '0', '1', 'projectData', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('799', '65', '累计到账', 'accumulative', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('800', '65', '合同价', 'moneys', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('801', '65', '结算价', 'settlement_price', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('802', '65', '合同调整额', 'contract_adjustment', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('804', '65', '合同', 'num', 'hidden', '11', null, '0', null, '1', '0', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('805', '35', '累计到账', 'accumulative', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
 
 -- ----------------------------
 -- Table structure for oa_flow_extent
@@ -4457,7 +4470,7 @@ CREATE TABLE `oa_flow_log` (
   `qmimg` text COMMENT '签名的图片base64',
   PRIMARY KEY (`id`),
   KEY `table` (`table`,`mid`)
-) ENGINE=MyISAM AUTO_INCREMENT=1245 DEFAULT CHARSET=utf8 COMMENT='单据操作记录';
+) ENGINE=MyISAM AUTO_INCREMENT=1251 DEFAULT CHARSET=utf8 COMMENT='单据操作记录';
 
 -- ----------------------------
 -- Records of oa_flow_log
@@ -4813,6 +4826,12 @@ INSERT INTO `oa_flow_log` VALUES ('1241', 'project', '8', '1', null, '编辑', '
 INSERT INTO `oa_flow_log` VALUES ('1242', 'project', '8', '1', null, '编辑', '0', '2020-09-27 17:40:55', null, '127.0.0.1', 'Firefox', '管理员', '1', '22', null, '1', '0', null);
 INSERT INTO `oa_flow_log` VALUES ('1243', 'project', '8', '1', null, '编辑', '0', '2020-09-27 17:43:29', null, '127.0.0.1', 'Firefox', '管理员', '1', '22', null, '1', '0', null);
 INSERT INTO `oa_flow_log` VALUES ('1244', 'project', '7', '1', null, '编辑', '0', '2020-09-28 10:13:21', null, '127.0.0.1', 'Firefox', '管理员', '1', '22', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1245', 'work', '6', '1', null, '提交', '0', '2020-09-28 14:34:00', null, '127.0.0.1', 'Firefox', '管理员', '1', '4', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1246', 'fininfom', '14', '1', null, '提交', '0', '2020-09-28 15:38:47', null, '127.0.0.1', 'Firefox', '管理员', '1', '65', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1247', 'fininfom', '14', '1', null, '编辑', '0', '2020-09-28 15:39:02', null, '127.0.0.1', 'Firefox', '管理员', '1', '65', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1248', 'fininfom', '14', '1', null, '编辑', '0', '2020-09-28 15:50:59', null, '127.0.0.1', 'Firefox', '管理员', '1', '65', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1249', 'fininfom', '15', '1', null, '提交', '0', '2020-09-28 16:09:10', null, '127.0.0.1', 'Firefox', '管理员', '1', '65', null, '1', '0', null);
+INSERT INTO `oa_flow_log` VALUES ('1250', 'fininfom', '16', '1', null, '提交', '0', '2020-09-28 16:27:00', null, '127.0.0.1', 'Firefox', '管理员', '1', '65', null, '1', '0', null);
 
 -- ----------------------------
 -- Table structure for oa_flow_menu
@@ -5090,7 +5109,7 @@ CREATE TABLE `oa_flow_todos` (
   PRIMARY KEY (`id`),
   KEY `table` (`table`,`mid`),
   KEY `modenum` (`modenum`,`mid`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COMMENT='单据通知给对应人员';
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COMMENT='单据通知给对应人员';
 
 -- ----------------------------
 -- Records of oa_flow_todos
@@ -5153,6 +5172,8 @@ INSERT INTO `oa_flow_todos` VALUES ('59', 'finkai', '开票申请', 'fininfom', 
 INSERT INTO `oa_flow_todos` VALUES ('60', 'finkai', '开票申请', 'fininfom', '12', '2', '2020-09-25 18:09:57', '2020-09-25 18:11:14', '1');
 INSERT INTO `oa_flow_todos` VALUES ('61', 'finkai', '开票申请', 'fininfom', '12', '3', '2020-09-25 18:11:17', '2020-09-25 18:12:13', '1');
 INSERT INTO `oa_flow_todos` VALUES ('62', 'finkai', '开票申请', 'fininfom', '12', '1', '2020-09-25 18:12:16', '2020-09-25 18:12:23', '1');
+INSERT INTO `oa_flow_todos` VALUES ('63', 'work', '任务', 'work', '6', '1', '2020-09-28 14:34:00', '2020-09-28 14:56:29', '1');
+INSERT INTO `oa_flow_todos` VALUES ('64', 'work', '任务', 'work', '6', '6', '2020-09-28 14:34:00', null, '0');
 
 -- ----------------------------
 -- Table structure for oa_flow_where
@@ -5899,7 +5920,7 @@ CREATE TABLE `oa_im_history` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `type` (`type`,`receid`,`uid`),
   KEY `optdt` (`optdt`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='IM会话记录历史表';
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='IM会话记录历史表';
 
 -- ----------------------------
 -- Records of oa_im_history
@@ -5914,7 +5935,9 @@ INSERT INTO `oa_im_history` VALUES ('7', 'group', '2', '4', '8', '2017-11-27 11:
 INSERT INTO `oa_im_history` VALUES ('8', 'agent', '16', '5', '1', '2020-09-25 18:09:16', '5L2g5pyJW!euoeeQhuWRmF3nmoRb5byA56Wo55Sz6K!3LOWNleWPtzpGRi0yMDIwMDkyNS0wMDAxXemcgOimgeWkhOeQhg::', '1', '流程待办');
 INSERT INTO `oa_im_history` VALUES ('9', 'agent', '16', '2', '5', '2020-09-25 18:09:57', '5L2g5pyJW!euoeeQhuWRmF3nmoRb5byA56Wo55Sz6K!3LOWNleWPtzpGRi0yMDIwMDkyNS0wMDAxXemcgOimgeWkhOeQhg::', '1', '流程待办');
 INSERT INTO `oa_im_history` VALUES ('10', 'agent', '16', '3', '2', '2020-09-25 18:11:17', '5L2g5pyJW!euoeeQhuWRmF3nmoRb5byA56Wo55Sz6K!3LOWNleWPtzpGRi0yMDIwMDkyNS0wMDAxXemcgOimgeWkhOeQhg::', '1', '流程待办');
-INSERT INTO `oa_im_history` VALUES ('11', 'agent', '16', '1', '1', '2020-09-25 18:14:15', '5L2g5o!Q5Lqk55qEW!W8gOelqOeUs!ivtyzljZXlj7c6RkYtMjAyMDA5MjUtMDAwMl3lt7Llhajpg6jlpITnkIblrozmiJA:', '0', '流程待办');
+INSERT INTO `oa_im_history` VALUES ('11', 'agent', '16', '1', '1', '2020-09-28 16:27:00', '5L2g5pyJW!euoeeQhuWRmF3nmoRb5byA56Wo55Sz6K!3LOWNleWPtzpGRi0yMDIwMDkyOC0wMDAzXemcgOimgeWkhOeQhg::', '0', '流程待办');
+INSERT INTO `oa_im_history` VALUES ('12', 'agent', '12', '1', '1', '2020-09-28 14:34:00', '566h55CG5ZGY5o!Q5Lqk5Lu75YqhW!iuvuiuoS5J6K6h5YiSXeWIhumFjee7mTrnrqHnkIblkZjvvIzpnIDopoHkvaDnnaPlr7w:', '0', '任务督导');
+INSERT INTO `oa_im_history` VALUES ('13', 'agent', '12', '6', '1', '2020-09-28 14:34:00', '566h55CG5ZGY5o!Q5Lqk5Lu75YqhW!iuvuiuoS5J6K6h5YiSXeWIhumFjee7mTrnrqHnkIblkZjvvIzpnIDopoHkvaDnnaPlr7w:', '1', '任务督导');
 
 -- ----------------------------
 -- Table structure for oa_im_menu
@@ -6808,7 +6831,7 @@ CREATE TABLE `oa_log` (
   `url` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `level` (`level`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 COMMENT='系统日志';
+) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 COMMENT='系统日志';
 
 -- ----------------------------
 -- Records of oa_log
@@ -6882,6 +6905,25 @@ INSERT INTO `oa_log` VALUES ('66', 'pc登录', '1', '管理员', '[admin]用户�
 INSERT INTO `oa_log` VALUES ('67', '错误SQL', '1', '管理员', 'Table &#39;oa.oa_&#39; doesn&#39;t exist', '2020-09-27 17:10:40', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=publicstore&m=mode_project|input&d=flow&modeid=22&ajaxbool=true&rnd=603953&pnum=');
 INSERT INTO `oa_log` VALUES ('68', '错误SQL', '1', '管理员', 'Table &#39;oa.oa_&#39; doesn&#39;t exist', '2020-09-27 17:10:40', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=publicstore&m=mode_project|input&d=flow&modeid=22&ajaxbool=true&rnd=603953&pnum=');
 INSERT INTO `oa_log` VALUES ('69', 'pc登录', '1', '管理员', '[admin]用户名登录成功', '2020-09-28 10:07:19', '127.0.0.1', 'Firefox', '1601258838830', '0', 'http://www.abc.com/index.php?a=check&m=login&d=&ajaxbool=true&rnd=643766');
+INSERT INTO `oa_log` VALUES ('70', 'pc登录', '1', '管理员', '[admin]用户名登录成功', '2020-09-28 11:45:28', '127.0.0.1', 'Firefox', '1601264727037', '0', 'http://www.abc.com/index.php?a=check&m=login&d=&ajaxbool=true&rnd=954898');
+INSERT INTO `oa_log` VALUES ('71', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 15:37:24', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=780304&ractid=3072');
+INSERT INTO `oa_log` VALUES ('72', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 15:37:58', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=422642&ractid=1844');
+INSERT INTO `oa_log` VALUES ('73', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 15:38:15', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=908357&ractid=3072');
+INSERT INTO `oa_log` VALUES ('74', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 15:50:32', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=545778&ractid=1844');
+INSERT INTO `oa_log` VALUES ('75', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 15:50:58', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=962782&ractid=3072');
+INSERT INTO `oa_log` VALUES ('76', 'pc登录', '1', '管理员', '[admin]用户名登录成功', '2020-09-28 16:02:31', '127.0.0.1', 'Firefox', '1601264727037', '0', 'http://www.abc.com/index.php?a=check&m=login&d=&ajaxbool=true&rnd=414959');
+INSERT INTO `oa_log` VALUES ('77', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 16:04:02', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=590660&ractid=GC-20121');
+INSERT INTO `oa_log` VALUES ('78', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 16:04:38', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=502168&ractid=GC-20121');
+INSERT INTO `oa_log` VALUES ('79', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 16:12:27', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=338476&ractid=3072');
+INSERT INTO `oa_log` VALUES ('80', '错误SQL', '1', '管理员', 'Unknown column &#39;money&#39; in &#39;field list&#39;', '2020-09-28 16:13:21', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=146391&ractid=3072');
+INSERT INTO `oa_log` VALUES ('81', '错误SQL', '1', '管理员', 'Unknown column &#39;num&#39; in &#39;where clause&#39;', '2020-09-28 16:14:08', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=988633&ractid=3072');
+INSERT INTO `oa_log` VALUES ('82', '错误SQL', '1', '管理员', 'Unknown column &#39;num&#39; in &#39;where clause&#39;', '2020-09-28 16:14:35', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=56553&ractid=3072');
+INSERT INTO `oa_log` VALUES ('83', '错误SQL', '1', '管理员', 'Unknown column &#39;3072&#39; in &#39;where clause&#39;', '2020-09-28 16:20:30', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=329965&ractid=3072');
+INSERT INTO `oa_log` VALUES ('84', '错误SQL', '1', '管理员', 'Unknown column &#39;3072&#39; in &#39;where clause&#39;', '2020-09-28 16:20:53', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=694484&ractid=3072');
+INSERT INTO `oa_log` VALUES ('85', '错误SQL', '1', '管理员', 'Unknown column &#39;3072&#39; in &#39;where clause&#39;', '2020-09-28 16:21:52', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=99340&ractid=3072');
+INSERT INTO `oa_log` VALUES ('86', '错误SQL', '1', '管理员', 'Table &#39;oa.fininfom&#39; doesn&#39;t exist', '2020-09-28 16:24:43', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=267655&ractid=3072');
+INSERT INTO `oa_log` VALUES ('87', '错误SQL', '1', '管理员', 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;}&#39; at line 1', '2020-09-28 16:25:10', '127.0.0.1', 'Firefox', null, '2', 'http://www.abc.com/index.php?a=ractchange&m=mode_finkai|input&d=flow&ajaxbool=true&rnd=496410&ractid=3072');
+INSERT INTO `oa_log` VALUES ('88', 'pc登录', '1', '管理员', '[admin]用户名登录成功', '2020-09-28 16:42:43', '127.0.0.1', 'Firefox', '1601282562906', '0', 'http://www.abc.com/index.php?a=check&m=login&d=&ajaxbool=true&rnd=712651');
 
 -- ----------------------------
 -- Table structure for oa_logintoken
@@ -6901,14 +6943,16 @@ CREATE TABLE `oa_logintoken` (
   `online` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `token` (`token`,`cfrom`)
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COMMENT='系统登录token';
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COMMENT='系统登录token';
 
 -- ----------------------------
 -- Records of oa_logintoken
 -- ----------------------------
 INSERT INTO `oa_logintoken` VALUES ('45', '1', '管理员', '2a0fosli', '2020-09-27 17:10:37', '2020-09-28 10:07:00', 'pc', '1601197837927', '127.0.0.1', 'Firefox', '1');
-INSERT INTO `oa_logintoken` VALUES ('38', '3', '小乔', 'wmetzvgk', '2020-09-25 18:12:05', '2020-09-26 16:05:25', 'pc', '1601026981048', '127.0.0.1', 'Firefox', '1');
-INSERT INTO `oa_logintoken` VALUES ('46', '1', '管理员', 'wlx7u7h8', '2020-09-28 10:07:18', '2020-09-28 11:22:27', 'pc', '1601258838830', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('49', '1', '管理员', '2gw06qi0', '2020-09-28 16:42:42', '2020-09-28 16:47:36', 'pc', '1601282562906', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('48', '1', '管理员', 'mbz1k80z', '2020-09-28 16:02:30', '2020-09-28 16:40:27', 'pc', '1601264727037', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('46', '1', '管理员', 'wlx7u7h8', '2020-09-28 10:07:18', '2020-09-28 11:42:01', 'pc', '1601258838830', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('47', '1', '管理员', '09l39p0y', '2020-09-28 11:45:27', '2020-09-28 16:00:39', 'pc', '1601264727037', '127.0.0.1', 'Firefox', '1');
 
 -- ----------------------------
 -- Table structure for oa_meet
@@ -7659,7 +7703,7 @@ CREATE TABLE `oa_reads` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `table_2` (`table`,`mid`,`optid`),
   KEY `table` (`table`,`mid`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COMMENT='单据浏览记录表';
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COMMENT='单据浏览记录表';
 
 -- ----------------------------
 -- Records of oa_reads
@@ -7688,7 +7732,7 @@ INSERT INTO `oa_reads` VALUES ('21', 'fininfom', '12', '5', '2020-09-25 18:09:54
 INSERT INTO `oa_reads` VALUES ('22', 'infor', '1', '2', '2020-09-25 18:11:00', '127.0.0.1', 'Firefox', '2020-09-25 18:11:00', '1');
 INSERT INTO `oa_reads` VALUES ('23', 'fininfom', '12', '2', '2020-09-25 18:11:15', '127.0.0.1', 'Firefox', '2020-09-25 18:11:15', '1');
 INSERT INTO `oa_reads` VALUES ('24', 'fininfom', '12', '3', '2020-09-25 18:12:14', '127.0.0.1', 'Firefox', '2020-09-25 18:12:14', '1');
-INSERT INTO `oa_reads` VALUES ('25', 'fininfom', '13', '1', '2020-09-26 14:35:55', '127.0.0.1', 'Chrome', '2020-09-25 18:13:52', '6');
+INSERT INTO `oa_reads` VALUES ('25', 'fininfom', '13', '1', '2020-09-28 14:59:04', '127.0.0.1', 'Firefox', '2020-09-25 18:13:52', '8');
 INSERT INTO `oa_reads` VALUES ('26', 'project', '3', '1', '2020-09-26 18:08:01', '127.0.0.1', 'Chrome', '2020-09-26 14:46:51', '3');
 INSERT INTO `oa_reads` VALUES ('27', 'project', '4', '1', '2020-09-26 17:16:06', '127.0.0.1', 'Chrome', '2020-09-26 14:47:34', '3');
 INSERT INTO `oa_reads` VALUES ('28', 'project', '2', '1', '2020-09-26 14:48:46', '127.0.0.1', 'Chrome', '2020-09-26 14:48:46', '1');
@@ -7699,6 +7743,11 @@ INSERT INTO `oa_reads` VALUES ('32', 'company', '2', '1', '2020-09-27 17:50:54',
 INSERT INTO `oa_reads` VALUES ('33', 'infor', '9', '1', '2020-09-28 09:45:22', '127.0.0.1', 'Firefox', '2020-09-28 09:45:22', '1');
 INSERT INTO `oa_reads` VALUES ('34', 'project', '8', '1', '2020-09-28 10:12:43', '127.0.0.1', 'Firefox', '2020-09-28 10:12:43', '1');
 INSERT INTO `oa_reads` VALUES ('35', 'project', '7', '1', '2020-09-28 10:12:54', '127.0.0.1', 'Firefox', '2020-09-28 10:12:49', '2');
+INSERT INTO `oa_reads` VALUES ('36', 'work', '6', '1', '2020-09-28 14:56:30', '127.0.0.1', 'Firefox', '2020-09-28 14:56:30', '1');
+INSERT INTO `oa_reads` VALUES ('37', 'fininfom', '14', '1', '2020-09-28 16:03:53', '127.0.0.1', 'Firefox', '2020-09-28 16:03:53', '1');
+INSERT INTO `oa_reads` VALUES ('38', 'custract', '3072', '1', '2020-09-28 16:05:47', '127.0.0.1', 'Firefox', '2020-09-28 16:05:42', '2');
+INSERT INTO `oa_reads` VALUES ('39', 'custract', '3680', '1', '2020-09-28 16:36:14', '127.0.0.1', 'Firefox', '2020-09-28 16:29:55', '3');
+INSERT INTO `oa_reads` VALUES ('40', 'fininfom', '16', '1', '2020-09-28 16:35:23', '127.0.0.1', 'Firefox', '2020-09-28 16:33:45', '3');
 
 -- ----------------------------
 -- Table structure for oa_repair
@@ -7978,7 +8027,7 @@ CREATE TABLE `oa_todo` (
   `tododt` datetime DEFAULT NULL COMMENT '提醒时间',
   `modenum` varchar(20) DEFAULT NULL COMMENT '对应模块编号',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='提醒消息表';
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='提醒消息表';
 
 -- ----------------------------
 -- Records of oa_todo
@@ -7993,6 +8042,11 @@ INSERT INTO `oa_todo` VALUES ('7', '1', '开票申请', '你有[管理员]的[�
 INSERT INTO `oa_todo` VALUES ('8', '1', '开票申请', '你有[管理员]的[开票申请,单号:FF-20200925-0002]需要处理', '1', '2020-09-25 18:14:01', null, '13', '2020-09-25 18:14:04', '2020-09-25 18:14:01', 'finkai');
 INSERT INTO `oa_todo` VALUES ('9', '1', '开票申请', '你有[管理员]的[开票申请,单号:FF-20200925-0002]需要处理', '1', '2020-09-25 18:14:08', null, '13', '2020-09-25 18:14:11', '2020-09-25 18:14:08', 'finkai');
 INSERT INTO `oa_todo` VALUES ('10', '1', '开票申请', '你提交的[开票申请,单号:FF-20200925-0002]已全部处理完成', '1', '2020-09-25 18:14:15', null, '13', '2020-09-25 18:14:24', '2020-09-25 18:14:15', 'finkai');
+INSERT INTO `oa_todo` VALUES ('12', '1', '任务', '管理员提交任务[设计.I计划]分配给:管理员，需要你督导', '1', '2020-09-28 14:34:00', null, '6', '2020-09-28 14:56:29', '2020-09-28 14:34:00', 'work');
+INSERT INTO `oa_todo` VALUES ('13', '6', '任务', '管理员提交任务[设计.I计划]分配给:管理员，需要你督导', '0', '2020-09-28 14:34:00', null, '6', null, '2020-09-28 14:34:00', 'work');
+INSERT INTO `oa_todo` VALUES ('16', '1', '开票申请', '你有[管理员]的[开票申请,单号:FF-20200928-0001]需要处理', '1', '2020-09-28 15:50:59', null, '14', '2020-09-28 16:03:52', '2020-09-28 15:50:59', 'finkai');
+INSERT INTO `oa_todo` VALUES ('17', '1', '开票申请', '你有[管理员]的[开票申请,单号:FF-20200928-0002]需要处理', '0', '2020-09-28 16:09:10', null, '15', null, '2020-09-28 16:09:10', 'finkai');
+INSERT INTO `oa_todo` VALUES ('18', '1', '开票申请', '你有[管理员]的[开票申请,单号:FF-20200928-0003]需要处理', '1', '2020-09-28 16:27:00', null, '16', '2020-09-28 16:33:44', '2020-09-28 16:27:00', 'finkai');
 
 -- ----------------------------
 -- Table structure for oa_tovoid
@@ -8250,7 +8304,7 @@ CREATE TABLE `oa_work` (
   `applydt` date DEFAULT NULL COMMENT '申请日期',
   `isturn` tinyint(1) DEFAULT '1' COMMENT '是否提交',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='任务';
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='任务';
 
 -- ----------------------------
 -- Records of oa_work
@@ -8259,6 +8313,7 @@ INSERT INTO `oa_work` VALUES ('1', null, '流程单据填写时建议添加保�
 INSERT INTO `oa_work` VALUES ('2', null, '深圳广诚功能开发', '改进', '中', '1', '管理员', '1、添加编辑器插件。\n', '2017-04-06 14:07:50', '1', '管理员', '2017-04-06 14:07:16', null, '0', null, '0', '1', '2', null, null, '0', '0', '1', '2017-04-06', '1');
 INSERT INTO `oa_work` VALUES ('3', null, '高级搜索添加', '改进', '中', '1', '管理员', '哈哈哈', '2017-04-18 11:43:47', '1', '管理员', '2017-04-10 17:14:14', null, '0', null, '0', '1', '2', null, null, '0', '45', '1', '2017-04-10', '1');
 INSERT INTO `oa_work` VALUES ('5', null, '标题改进', 'bug', '低', '7', '赵子龙', null, '2017-08-15 17:43:16', '1', '管理员', '2017-08-12 17:31:18', null, '0', null, '0', '3', '3', '3', '小乔', '0', '0', '1', '2017-08-12', '1');
+INSERT INTO `oa_work` VALUES ('6', null, 'I计划', '设计', '中', '1', '管理员', null, '2020-09-28 14:34:00', '1', '管理员', '2020-09-28 14:33:18', null, '0', null, '0', '3', '4', '1,6', '管理员,张飞', '0', '0', '1', '2020-09-28', '1');
 
 -- ----------------------------
 -- Table structure for oa_wouser
