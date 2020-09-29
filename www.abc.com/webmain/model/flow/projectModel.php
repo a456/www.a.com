@@ -10,7 +10,7 @@ class flow_projectClassModel extends flowModel
 	    $this->projectt = array('市政','房建','公路','轨道','圆林绿化');//项目类别
 	    $this->businesst = array('概算','预算','控制价','变更签证','结算','财务决算','期中支付','全过程','跟踪审计','框架协议');// 业务类别
 	    $this->jobst = array('编制','审核');// 工作类别
-	    $this->area = array('珠海','深圳','东莞','广州','广东','中山','惠州','厦门','安徽','西安','阳江');// 工作类别
+	    $this->area = array('珠海','深圳','东莞','广州','广东','中山','惠州','厦门','安徽','西安','阳江');// 地区
 	    $this->is_bidding = array('否','是');//  是否公开招标
 	    $this->is_free = array('否','是');//  是否公开招标
 	    $this->status = array('待执行','已完成','执行中');//  是否公开招标
@@ -83,7 +83,7 @@ class flow_projectClassModel extends flowModel
 		
 		return array(
 			'where' => '',
-			'order' => 'optdt desc'
+			'order' => 'id desc'
 		);
 	}
 }

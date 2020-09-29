@@ -1,17 +1,17 @@
 <?php
 /**
-*	模块：finkai.开票申请，
+*	模块：projectstaff.项目员工，
 *	说明：自定义区域内可写您想要的代码，模块列表页面，生成分为2块
-*	来源：流程模块→表单元素管理→[模块.开票申请]→生成列表页
+*	来源：流程模块→表单元素管理→[模块.项目员工]→生成列表页
 */
 defined('HOST') or die ('not access');
 ?>
 <script>
 $(document).ready(function(){
 	{params}
-	var modenum = 'finkai',modename='开票申请',isflow=1,modeid='65',atype = params.atype,pnum=params.pnum;
+	var modenum = 'projectstaff',modename='项目员工',isflow=0,modeid='76',atype = params.atype,pnum=params.pnum;
 	if(!atype)atype='';if(!pnum)pnum='';
-	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"moneys","name":"\u5408\u540c\u4ef7","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"type","name":"\u7c7b\u578b","fieldstype":"fixed","ispx":"0","isalign":"0","islb":"0"},{"fields":"accumulative","name":"\u7d2f\u8ba1\u5230\u8d26","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"settlement_price","name":"\u7ed3\u7b97\u4ef7","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"contract_adjustment","name":"\u5408\u540c\u8c03\u6574\u989d","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"name","name":"\u5f00\u7968\u540d\u79f0","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"money","name":"\u5f00\u7968\u91d1\u989d","fieldstype":"number","ispx":"0","isalign":"0","islb":"1"},{"fields":"paydt","name":"\u5f00\u7968\u65e5\u671f","fieldstype":"date","ispx":"0","isalign":"0","islb":"1"},{"fields":"fullname","name":"\u516c\u53f8\u5355\u4f4d\u540d\u79f0","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"address","name":"\u516c\u53f8\u5730\u5740","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"tel","name":"\u8054\u7cfb\u7535\u8bdd","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"shibieid","name":"\u7eb3\u7a0e\u8bc6\u522b\u53f7","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"openbank","name":"\u5f00\u6237\u884c","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"cardid","name":"\u5f00\u6237\u5e10\u53f7","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"},{"fields":"paytype","name":"\u5f00\u7968\u7c7b\u578b","fieldstype":"rockcombo","ispx":"0","isalign":"0","islb":"1"},{"fields":"numselect","name":"\u76f8\u5173\u5355\u53f7","fieldstype":"selectdatafalse","ispx":"0","isalign":"0","islb":"0"},{"fields":"num","name":"\u5408\u540c","fieldstype":"hidden","ispx":"0","isalign":"0","islb":"0"},{"fields":"explain","name":"\u8bf4\u660e","fieldstype":"textarea","ispx":"0","isalign":"0","islb":"0"}],fieldsselarr= [];
+	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"xmselect","name":"\u9879\u76ee\u540d\u79f0","fieldstype":"selectdatafalse","ispx":"0","isalign":"0","islb":"1"},{"fields":"totalp","name":"\u603b\u8fdb\u5c55","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"projectt","name":"\u9879\u76ee\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"businesst","name":"\u4e1a\u52a1\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobst","name":"\u5de5\u4f5c\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"fuze","name":"\u9879\u76ee\u8d1f\u8d23\u4eba","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"plans","name":"\u8ba1\u5212\u5f00\u59cb","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"status","name":"\u72b6\u6001\u8fdb\u5ea6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"content","name":"\u8bf4\u660e\u5907\u6ce8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"num","name":"\u9879\u76ee\u7f16\u53f7","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobtype","name":"\u5de5\u4f5c\u7c7b\u578b","fieldstype":"checkboxall","ispx":"0","isalign":"0","islb":"1"},{"fields":"employees","name":"\u5458\u5de5\u59d3\u540d","fieldstype":"changeusercheck","ispx":"0","isalign":"0","islb":"1"},{"fields":"duty","name":"\u804c\u8d23","fieldstype":"textarea","ispx":"0","isalign":"0","islb":"1"},{"fields":"requestt","name":"\u8981\u6c42\u65f6\u95f4","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"mid","name":"\u5bf9\u5e94\u4e3b\u8868project.id","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"}],fieldsselarr= {"columns_projectstaff_":"xmselect,projectt,businesst,jobst,fuze,plans,status,content,num,jobtype,employees,duty,requestt,caozuo"};
 	
 	var c = {
 		reload:function(){
@@ -69,14 +69,14 @@ $(document).ready(function(){
 		},
 		subscribelist:function(){
 			js.subscribe({
-				title:'开票申请('+nowtabs.name+')',
-				cont:'开票申请('+nowtabs.name+')的列表的',
-				explain:'订阅[开票申请]的列表',
+				title:'项目员工('+nowtabs.name+')',
+				cont:'项目员工('+nowtabs.name+')的列表的',
+				explain:'订阅[项目员工]的列表',
 				objtable:a
 			});
 		},
 		getacturl:function(act){
-			return js.getajaxurl(act,'mode_finkai|input','flow',{'modeid':modeid});
+			return js.getajaxurl(act,'mode_projectstaff|input','flow',{'modeid':modeid});
 		},
 		changatype:function(o1,lx){
 			$("button[id^='changatype{rand}']").removeClass('active');
@@ -120,8 +120,8 @@ $(document).ready(function(){
 			}
 		},
 		daoru:function(){
-			window.managelistfinkai = a;
-			addtabs({num:'daorufinkai',url:'flow,input,daoru,modenum=finkai',icons:'plus',name:'导入开票申请'});
+			window.managelistprojectstaff = a;
+			addtabs({num:'daoruprojectstaff',url:'flow,input,daoru,modenum=projectstaff',icons:'plus',name:'导入项目员工'});
 		},
 		initcolumns:function(bots){
 			var num = 'columns_'+modenum+'_'+pnum+'',d=[],d1,d2={},i,len=fieldsarr.length,bok;
@@ -191,10 +191,10 @@ $(document).ready(function(){
 	
 	//表格参数设定
 	var bootparams = {
-		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('ZmluaW5mb20:'),
+		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdHN0YWZm'),
 		url:c.storeurl(),storeafteraction:'storeaftershow',storebeforeaction:'storebeforeshow',
 		params:{atype:atype},
-		columns:[{text:"申请人",dataIndex:"base_name",sortable:true},{text:"申请人部门",dataIndex:"base_deptname",sortable:true},{text:"单号",dataIndex:"sericnum"},{text:"开票名称",dataIndex:"name"},{text:"开票金额",dataIndex:"money"},{text:"开票日期",dataIndex:"paydt"},{text:"公司单位名称",dataIndex:"fullname"},{text:"纳税识别号",dataIndex:"shibieid"},{text:"开票类型",dataIndex:"paytype"},{text:"状态",dataIndex:"statustext"},{
+		columns:[{text:"项目名称",dataIndex:"xmselect"},{text:"总进展",dataIndex:"totalp"},{text:"项目类别",dataIndex:"projectt"},{text:"业务类别",dataIndex:"businesst"},{text:"工作类别",dataIndex:"jobst"},{text:"项目负责人",dataIndex:"fuze"},{text:"计划开始",dataIndex:"plans"},{text:"状态进度",dataIndex:"status"},{text:"说明备注",dataIndex:"content"},{text:"项目编号",dataIndex:"num"},{text:"工作类型",dataIndex:"jobtype"},{text:"员工姓名",dataIndex:"employees"},{text:"职责",dataIndex:"duty"},{text:"要求时间",dataIndex:"requestt"},{
 			text:'',dataIndex:'caozuo',callback:'opegs{rand}'
 		}],
 		itemdblclick:function(){
@@ -216,7 +216,7 @@ $(document).ready(function(){
 //[自定义区域end]
 
 	js.initbtn(c);
-	var a = $('#viewfinkai_{rand}').bootstable(bootparams);
+	var a = $('#viewprojectstaff_{rand}').bootstable(bootparams);
 	c.init();
 	var ddata = [{name:'高级搜索',lx:0}];
 	if(admintype==1)ddata.push({name:'自定义列显示',lx:2});
@@ -241,9 +241,9 @@ $(document).ready(function(){
 	<tr>
 		<td style="padding-right:10px;" id="tdleft_{rand}" nowrap><button id="addbtn_{rand}" class="btn btn-primary" click="clickwin,0" disabled type="button"><i class="icon-plus"></i> 新增</button></td>
 		<td>
-			<input class="form-control" style="width:160px" id="key_{rand}" placeholder="关键字/申请人/单号">
+			<input class="form-control" style="width:160px" id="key_{rand}" placeholder="关键字">
 		</td>
-		<td style="padding-left:10px"><select class="form-control" style="width:120px" id="selstatus_{rand}"><option value="">-全部状态-</option><option style="color:blue" value="0">待处理</option><option style="color:green" value="1">已到账</option><option style="color:#888888" value="5">已作废</option><option style="color:#17B2B7" value="23">退回</option></select></td>
+		<td style="padding-left:10px"><select class="form-control" style="width:120px" id="selstatus_{rand}"><option value="">-全部状态-</option><option style="color:blue" value="0">待处理</option><option style="color:green" value="1">已审核</option><option style="color:red" value="2">不同意</option><option style="color:#888888" value="5">已作废</option></select></td>
 		<td style="padding-left:10px">
 			<div style="width:85px" class="btn-group">
 			<button class="btn btn-default" click="searchbtn" type="button">搜索</button><button class="btn btn-default" id="downbtn_{rand}" type="button" style="padding-left:8px;padding-right:8px"><i class="icon-angle-down"></i></button> 
@@ -258,5 +258,5 @@ $(document).ready(function(){
 	</table>
 </div>
 <div class="blank10"></div>
-<div id="viewfinkai_{rand}"></div>
+<div id="viewprojectstaff_{rand}"></div>
 <!--HTMLend-->
