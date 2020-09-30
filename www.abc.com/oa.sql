@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2020-09-29 16:18:45
+Date: 2020-09-30 10:21:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -67,7 +67,7 @@ CREATE TABLE `oa_admin` (
 -- ----------------------------
 -- Records of oa_admin
 -- ----------------------------
-INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2033', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '深圳广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-09-29 16:15:33', '1');
+INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2033', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '深圳广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-09-29 21:31:48', '1');
 INSERT INTO `oa_admin` VALUES ('2', null, 'diaochan', '貂蝉', 'e10adc3949ba59abbe56e057f20f883e', '70', '1', '0', '女', null, 'upload/face/2.jpg', '3', '财务部', null, null, null, '深圳广诚开发团队/财务部', '5', '诸葛亮', '财务总监', '0', '[1],[3]', '[5]', null, '15800000007', '1', '2016-08-09', null, null, null, null, null, '0', 'diaochan', null, '2', '0', '2020-09-25 18:11:43', '1');
 INSERT INTO `oa_admin` VALUES ('3', null, 'xiaoqiao', '小乔', 'e10adc3949ba59abbe56e057f20f883e', '123', '1', '0', '女', null, 'upload/face/3.jpg', '3', '财务部', null, null, null, '深圳广诚开发团队/财务部', '2', '貂蝉', '出纳', '0', '[1],[3]', '[5],[2]', null, '15800000001', '1', '2017-05-02', null, '2016-08-30 20:34:23', null, null, null, '0', 'xiaoqiao', null, '2', '0', '2020-09-26 16:05:25', '1');
 INSERT INTO `oa_admin` VALUES ('4', null, 'daqiao', '大乔', 'e10adc3949ba59abbe56e057f20f883e', '196', '1', '0', '女', null, 'upload/face/4.jpg', '4', '行政人事部', null, null, null, '深圳广诚开发团队/行政人事部', '5', '诸葛亮', '人事主管', '0', '[1],[4]', '[5]', null, '15800000002', '1', '2017-07-01', null, '2016-10-20 22:27:51', null, null, null, '0', 'daqiao', null, '2', '0', null, '1');
@@ -3520,7 +3520,7 @@ CREATE TABLE `oa_flow_element` (
   PRIMARY KEY (`id`),
   KEY `mid` (`mid`),
   KEY `fields` (`fields`)
-) ENGINE=MyISAM AUTO_INCREMENT=826 DEFAULT CHARSET=utf8 COMMENT='模块元素';
+) ENGINE=MyISAM AUTO_INCREMENT=827 DEFAULT CHARSET=utf8 COMMENT='模块元素';
 
 -- ----------------------------
 -- Records of oa_flow_element
@@ -3615,16 +3615,16 @@ INSERT INTO `oa_flow_element` VALUES ('89', '21', '打卡类型', 'type', 'text'
 INSERT INTO `oa_flow_element` VALUES ('90', '21', '添加时间', 'optdt', 'datetime', '3', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('91', '21', '定位地址', 'address', 'text', '4', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('92', '21', '姓名', 'base_name', 'text', '0', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('93', '22', '项目属性', 'type', 'rockcombo', '37', null, '1', 'projecttype', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('94', '22', '项目编号', 'num', 'num', '7', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '1', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('95', '22', '项目名称', 'title', 'text', '4', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '1', '1', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('96', '22', '开始时间', 'startdt', 'datetime', '44', '{now}', '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '1', '0', '1', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('97', '22', '预计结束时间', 'enddt', 'datetime', '45', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('98', '22', '负责人', 'fuze', 'changeuser', '12', null, '1', 'fuzeid', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('99', '22', '部门名称', 'runuser', 'changedeptcheck', '13', null, '1', 'runuserid', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('100', '22', '进度(%)', 'progress', 'select', '46', '0', '1', 'progressdata', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('101', '22', '备注', 'content', 'text', '40', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('102', '22', '状态', 'status', 'select', '39', '0', '1', '0|待执行,1|已完成,3|执行中', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('93', '22', '项目属性', 'type', 'rockcombo', '36', null, '1', 'projecttype', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('94', '22', '项目编号', 'num', 'num', '6', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '1', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('95', '22', '项目名称', 'title', 'text', '3', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '1', '1', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('96', '22', '开始时间', 'startdt', 'datetime', '42', '{now}', '1', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '1', '0', '1', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('97', '22', '预计结束时间', 'enddt', 'datetime', '43', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('98', '22', '负责人', 'fuze', 'changeuser', '11', null, '1', 'fuzeid', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('99', '22', '部门名称', 'runuser', 'changedeptcheck', '12', null, '1', 'runuserid', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('100', '22', '进度(%)', 'progress', 'select', '44', '0', '1', 'progressdata', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('101', '22', '备注', 'content', 'text', '39', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('102', '22', '状态', 'status', 'select', '38', '0', '1', '0|待执行,1|已完成,3|执行中', '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('103', '23', '类型', 'atype', 'select', '0', '外出', '1', '外出,出差', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('104', '23', '外出地址', 'address', 'text', '0', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '1', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('105', '23', '外出时间', 'outtime', 'datetime', '0', null, '1', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '0', null, null, '0', '0');
@@ -3965,7 +3965,7 @@ INSERT INTO `oa_flow_element` VALUES ('449', '10', '手机号', 'mobile', 'text'
 INSERT INTO `oa_flow_element` VALUES ('451', '1', '操作人', 'optname', 'text', '8', null, '0', null, '0', '0', null, '0', '0', null, null, '0', null, '1', '1', '0', '0', '1', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('452', '3', '操作时间', 'optdt', 'datetime', '9', null, '0', null, '0', '0', null, '0', '0', null, null, '0', null, '1', '1', '0', '1', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('453', '3', '部门', 'deptname', 'text', '0', null, '0', null, '0', '0', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('454', '22', '任务数', 'workshu', 'number', '47', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('454', '22', '任务数', 'workshu', 'number', '45', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('456', '7', '合同数', 'htshu', 'number', '27', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '0', '1', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('455', '7', '是否标★', 'isstat', 'select', '24', '0', '1', '0|否,1|是', '1', '1', null, '0', '0', null, null, '0', null, '0', '1', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('457', '7', '销售总额', 'moneyz', 'number', '28', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '0', '1', '0', '0', '1', null, null, '0', '0');
@@ -4242,40 +4242,40 @@ INSERT INTO `oa_flow_element` VALUES ('756', '35', '成果文件日期', 'result
 INSERT INTO `oa_flow_element` VALUES ('757', '35', '累计收款', 'cumulative_collection', 'number', '37', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('758', '35', '备注', 'explain', 'text', '38', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('759', '35', '创建时间', 'applydt', 'datetime', '39', null, '0', null, '0', '0', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('761', '22', '合同编号', 'htnum', 'selectdatafalse', '2', null, '1', 'hetongdata,htid', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('762', '22', '合同名称', 'htname', 'text', '3', null, '1', null, '1', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('763', '22', '客户id', 'custid', 'text', '5', null, '1', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('764', '22', '客户名称', 'custname', 'text', '6', null, '1', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('765', '22', '总进展', 'totalp', 'text', '8', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('766', '22', '项目类别', 'projectt', 'select', '9', null, '1', '0|市政,1|房建,2|公路,3|轨道,4|园林绿化', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('767', '22', '业务类别', 'businesst', 'select', '10', null, '1', '0|概算,1|预算,2|控制价,3|变更签证,4|结算,5|财务决算,6|期中支付,7|全过程,8|跟踪审计,9|框架协议', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('768', '22', '工作类别', 'jobst', 'select', '11', null, '1', '0|编制,1|审核', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('769', '22', '计划开始', 'plans', 'datetime', '14', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('770', '22', '计划完成', 'plane', 'datetime', '15', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('771', '22', '地区', 'area', 'select', '16', null, '0', '0|珠海,1|深圳,2|东莞,3|广州', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('772', '22', '委托联系人', 'delegatec', 'text', '17', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('773', '22', '委托单位电话', 'requesterp', 'text', '18', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('774', '22', '是否公开招标', 'is_bidding', 'select', '19', null, '0', '0|否,1|是', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('775', '22', '是否免费工程', 'is_free', 'select', '20', null, '0', '0|否,1|是', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('776', '22', '接收资料时间', 'receivedt', 'datetime', '21', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('777', '22', '初稿时间', 'firstdraftt', 'datetime', '22', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('778', '22', '正式报告', 'formalreport', 'datetime', '23', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('779', '22', '难度系数', 'difficulty', 'text', '24', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('780', '22', '咨询费', 'consultingfee', 'number', '25', null, '0', null, '1', '1', null, '0', '0', null, null, '12', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('781', '22', '送审/编制造价', 'manufacturingp', 'number', '26', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '1', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('782', '22', '审核造价', 'auditc', 'number', '27', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('783', '22', '监管服务平台', 'platform', 'text', '28', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('784', '22', '回签序号', 'sign_back', 'text', '29', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('785', '22', '快递地址', 'deliverya', 'text', '30', null, '0', null, '1', '1', null, '0', '0', null, null, '30', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('786', '22', '快递单号', 'trackingn', 'text', '31', null, '0', null, '1', '1', null, '0', '0', null, null, '25', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('787', '22', '档案盒编号', 'filebox', 'text', '32', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('788', '22', '编制人', 'editor', 'text', '33', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('789', '22', '复核人', 'reviewer', 'changeuser', '34', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('790', '22', '批准人', 'approver', 'changeuser', '35', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('791', '22', '提交人', 'submitter', 'changeuser', '36', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
-INSERT INTO `oa_flow_element` VALUES ('792', '22', '付款条款', 'paymentt', 'textarea', '38', null, '0', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('793', '22', '工时', 'workingh', 'number', '41', null, '0', null, '0', '1', 'readonly', '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
-INSERT INTO `oa_flow_element` VALUES ('795', '22', '累计工时', 'grandt', 'number', '43', null, '0', null, '0', '1', 'readonly', '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('761', '22', '合同编号', 'htnum', 'selectdatafalse', '1', null, '1', 'hetongdata,htid', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('762', '22', '合同名称', 'htname', 'text', '2', null, '1', null, '1', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('763', '22', '客户id', 'custid', 'text', '4', null, '1', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('764', '22', '客户名称', 'custname', 'text', '5', null, '1', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('765', '22', '总进展', 'totalp', 'text', '7', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('766', '22', '项目类别', 'projectt', 'select', '8', null, '1', '0|市政,1|房建,2|公路,3|轨道,4|园林绿化', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('767', '22', '业务类别', 'businesst', 'select', '9', null, '1', '0|概算,1|预算,2|控制价,3|变更签证,4|结算,5|财务决算,6|期中支付,7|全过程,8|跟踪审计,9|框架协议', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('768', '22', '工作类别', 'jobst', 'select', '10', null, '1', '0|编制,1|审核', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('769', '22', '计划开始', 'plans', 'datetime', '13', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('770', '22', '计划完成', 'plane', 'datetime', '14', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('771', '22', '地区', 'area', 'select', '15', null, '0', '0|珠海,1|深圳,2|东莞,3|广州', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('772', '22', '委托联系人', 'delegatec', 'text', '16', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('773', '22', '委托单位电话', 'requesterp', 'text', '17', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('774', '22', '是否公开招标', 'is_bidding', 'select', '18', null, '0', '0|否,1|是', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('775', '22', '是否免费工程', 'is_free', 'select', '19', null, '0', '0|否,1|是', '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('776', '22', '接收资料时间', 'receivedt', 'datetime', '20', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('777', '22', '初稿时间', 'firstdraftt', 'datetime', '21', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('778', '22', '正式报告', 'formalreport', 'datetime', '22', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('779', '22', '难度系数', 'difficulty', 'text', '23', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('780', '22', '咨询费', 'consultingfee', 'number', '24', null, '0', null, '1', '1', null, '0', '0', null, null, '12', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('781', '22', '送审/编制造价', 'manufacturingp', 'number', '25', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '1', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('782', '22', '审核造价', 'auditc', 'number', '26', null, '0', null, '1', '1', null, '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('783', '22', '监管服务平台', 'platform', 'text', '27', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('784', '22', '回签序号', 'sign_back', 'text', '28', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('785', '22', '快递地址', 'deliverya', 'text', '29', null, '0', null, '1', '1', null, '0', '0', null, null, '30', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('786', '22', '快递单号', 'trackingn', 'text', '30', null, '0', null, '1', '1', null, '0', '0', null, null, '25', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('787', '22', '档案盒编号', 'filebox', 'text', '31', null, '0', null, '1', '1', null, '0', '0', null, null, '20', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('788', '22', '编制人', 'editor', 'text', '32', null, '0', null, '1', '1', null, '0', '0', null, null, '10', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('789', '22', '复核人', 'reviewer', 'changeuser', '33', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('790', '22', '批准人', 'approver', 'changeuser', '34', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('791', '22', '提交人', 'submitter', 'changeuser', '35', null, '0', null, '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('792', '22', '付款条款', 'paymentt', 'textarea', '37', null, '0', null, '1', '1', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('793', '22', '工时', 'workingh', 'number', '40', null, '0', null, '0', '1', 'readonly', '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
+INSERT INTO `oa_flow_element` VALUES ('795', '22', '累计工时', 'grandt', 'number', '41', null, '0', null, '0', '1', 'readonly', '0', '0', null, null, '15', null, '0', '0', '0', '0', '0', null, null, '0', '1');
 INSERT INTO `oa_flow_element` VALUES ('808', '76', '总进展', 'totalp', 'text', '1', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('798', '22', '所属项目', 'pid', 'select', '0', '0', '1', 'projectData', '1', '1', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('799', '65', '累计到账', 'accumulative', 'text', '0', null, '0', null, '0', '0', 'readonly', '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
@@ -4298,6 +4298,7 @@ INSERT INTO `oa_flow_element` VALUES ('820', '76', '职责', 'duty', 'textarea',
 INSERT INTO `oa_flow_element` VALUES ('821', '76', '要求时间', 'requestt', 'datetime', '14', '{now}', '0', null, '1', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('822', '76', '对应主表project.id', 'mid', 'hidden', '15', null, '0', null, '1', '0', null, '0', '0', null, null, '0', null, '0', '0', '0', '0', '0', null, null, '0', '0');
 INSERT INTO `oa_flow_element` VALUES ('823', '76', '项目名称', 'xmselect', 'selectdatafalse', '0', null, '1', 'xmselect,mid', '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
+INSERT INTO `oa_flow_element` VALUES ('826', '22', '分配', 'distribution', 'text', '46', null, '0', null, '0', '1', null, '0', '0', null, null, '0', null, '1', '0', '0', '0', '0', null, null, '0', '0');
 
 -- ----------------------------
 -- Table structure for oa_flow_extent
@@ -7008,7 +7009,7 @@ CREATE TABLE `oa_logintoken` (
 -- Records of oa_logintoken
 -- ----------------------------
 INSERT INTO `oa_logintoken` VALUES ('50', '1', '管理员', '87l7rvaw', '2020-09-29 08:01:33', '2020-09-29 10:45:29', 'pc', '1601282562906', '127.0.0.1', 'Firefox', '1');
-INSERT INTO `oa_logintoken` VALUES ('53', '1', '管理员', 'fauwvv58', '2020-09-29 15:00:22', '2020-09-29 16:15:33', 'pc', '1601362822394', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('53', '1', '管理员', 'fauwvv58', '2020-09-29 15:00:22', '2020-09-29 21:31:48', 'pc', '1601362822394', '127.0.0.1', 'Firefox', '1');
 INSERT INTO `oa_logintoken` VALUES ('51', '1', '管理员', 'bh8t80c3', '2020-09-29 10:49:18', '2020-09-29 12:14:08', 'pc', '1601347758749', '127.0.0.1', 'Firefox', '1');
 INSERT INTO `oa_logintoken` VALUES ('52', '1', '管理员', 're3emzbz', '2020-09-29 12:16:51', '2020-09-29 14:59:08', 'pc', '1601353011299', '127.0.0.1', 'Firefox', '1');
 
@@ -7666,7 +7667,7 @@ INSERT INTO `oa_option` VALUES ('369', '行政人事部文件夹目录', '0', nu
 INSERT INTO `oa_option` VALUES ('378', null, '0', null, 'systemnum', '5e1a8cb8d02d9e1d9ed5b731e7c4fdf6', '0', null, '1', '2017-12-19 23:39:15', '1', null, null, null);
 INSERT INTO `oa_option` VALUES ('379', '其它', '0', '52', null, null, '0', null, '1', null, '0', null, null, null);
 INSERT INTO `oa_option` VALUES ('380', '模块列定义', '0', '-1035', 'columns_custract_', 'custname,num,contract_name,is_frame,money,service_type,party,signdt,contract_elements,contract_status,explain,caozuo', '0', null, '1', '2020-09-24 18:42:57', '1', null, null, null);
-INSERT INTO `oa_option` VALUES ('381', '模块列定义', '0', '-1022', 'columns_project_', 'title,custname,num,projectt,businesst,jobst,fuze,runuser,is_free,type,status,grandt,progress,workshu,caozuo', '0', null, '1', '2020-09-28 11:04:12', '1', null, null, null);
+INSERT INTO `oa_option` VALUES ('381', '模块列定义', '0', '-1022', 'columns_project_', 'distribution,title,custname,num,projectt,businesst,jobst,fuze,runuser,is_free,type,status,grandt,workshu,caozuo', '0', null, '1', '2020-09-29 17:46:31', '1', null, null, null);
 INSERT INTO `oa_option` VALUES ('382', '模块列定义', '0', '-1076', 'columns_projectstaff_', 'xmselect,projectt,businesst,jobst,fuze,plans,status,content,num,jobtype,employees,duty,requestt,caozuo', '0', null, '1', '2020-09-29 15:49:52', '1', null, null, null);
 
 -- ----------------------------
@@ -7770,6 +7771,27 @@ CREATE TABLE `oa_projectstaff` (
 INSERT INTO `oa_projectstaff` VALUES ('2', '0,1,2,3,4', '2020-09-28 21:17:43', '诸葛亮,管理员,张飞', '5,1,6', '啊啊啊', '2020-09-28 21:17:58', '1', '管理员', '2020-09-28 21:17:58', '1', '1');
 INSERT INTO `oa_projectstaff` VALUES ('8', null, '2020-09-29 10:52:15', '小乔,貂蝉', '3,2', '63', '2020-09-29 10:52:36', '1', '管理员', '2020-09-29 10:52:36', '1', '1');
 INSERT INTO `oa_projectstaff` VALUES ('9', '1,2', '2020-09-29 14:56:33', '诸葛亮,小乔', '5,3', '66', '2020-09-29 14:56:49', '1', '管理员', '2020-09-29 14:56:49', '1', '4');
+
+-- ----------------------------
+-- Table structure for oa_projectwork
+-- ----------------------------
+DROP TABLE IF EXISTS `oa_projectwork`;
+CREATE TABLE `oa_projectwork` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '员工工时',
+  `mid` int(6) DEFAULT NULL COMMENT '项目id',
+  `yid` int(6) DEFAULT NULL COMMENT '员工id',
+  `registert` datetime DEFAULT NULL COMMENT '登记日期',
+  `progress` varchar(255) DEFAULT NULL COMMENT '进展',
+  `work` decimal(10,2) DEFAULT NULL COMMENT '工时',
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  `uid` int(6) DEFAULT NULL COMMENT '创建用户di',
+  `adddt` datetime DEFAULT NULL COMMENT '添加id',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of oa_projectwork
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for oa_reads
