@@ -49,9 +49,11 @@ class flow_projectstaffClassModel extends flowModel
 	
 	protected function flowbillwhere($uid, $lx)
 	{
-		
+        $where		= '';
+        $projcetid 	= (int)$this->rock->post('projcetid');
+        if($projcetid>0)$where='and `mid`='.$projcetid.'';
 		return array(
-			'where' => '',
+			'where' => $where,
 			'order' => 'id desc'
 		);
 	}

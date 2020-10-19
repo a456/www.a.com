@@ -1,17 +1,17 @@
 <?php
 /**
-*	模块：projectstaff.项目员工，
+*	模块：projectws.员工工时，
 *	说明：自定义区域内可写您想要的代码，模块列表页面，生成分为2块
-*	来源：流程模块→表单元素管理→[模块.项目员工]→生成列表页
+*	来源：流程模块→表单元素管理→[模块.员工工时]→生成列表页
 */
 defined('HOST') or die ('not access');
 ?>
 <script>
 $(document).ready(function(){
 	{params}
-	var modenum = 'projectstaff',modename='项目员工',isflow=0,modeid='76',atype = params.atype,pnum=params.pnum;
+	var modenum = 'projectws',modename='员工工时',isflow=0,modeid='77',atype = params.atype,pnum=params.pnum;
 	if(!atype)atype='';if(!pnum)pnum='';
-	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"xmselect","name":"\u9879\u76ee\u540d\u79f0","fieldstype":"selectdatafalse","ispx":"0","isalign":"0","islb":"1"},{"fields":"totalp","name":"\u603b\u8fdb\u5c55","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"projectt","name":"\u9879\u76ee\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"businesst","name":"\u4e1a\u52a1\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobst","name":"\u5de5\u4f5c\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"fuze","name":"\u9879\u76ee\u8d1f\u8d23\u4eba","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"plans","name":"\u8ba1\u5212\u5f00\u59cb","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"status","name":"\u72b6\u6001\u8fdb\u5ea6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"content","name":"\u8bf4\u660e\u5907\u6ce8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"num","name":"\u9879\u76ee\u7f16\u53f7","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobtype","name":"\u5de5\u4f5c\u7c7b\u578b","fieldstype":"checkboxall","ispx":"0","isalign":"0","islb":"1"},{"fields":"employees","name":"\u5458\u5de5\u59d3\u540d","fieldstype":"changeusercheck","ispx":"0","isalign":"0","islb":"1"},{"fields":"duty","name":"\u804c\u8d23","fieldstype":"textarea","ispx":"0","isalign":"0","islb":"1"},{"fields":"requestt","name":"\u8981\u6c42\u65f6\u95f4","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"mid","name":"\u5bf9\u5e94\u4e3b\u8868project.id","fieldstype":"text","ispx":"0","isalign":"0","islb":"0"}],fieldsselarr= {"columns_projectstaff_":"xmselect,projectt,businesst,jobst,fuze,plans,status,content,num,jobtype,employees,duty,requestt,caozuo"};
+	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"employees","name":"\u5458\u5de5\u59d3\u540d","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"title","name":"\u9879\u76ee\u540d\u79f0","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"duty","name":"\u804c\u8d23","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"progress","name":"\u603b\u8fdb\u5c55","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"work","name":"\u672c\u671f\u5de5\u65f6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"totalwork","name":"\u7d2f\u8ba1\u5de5\u65f6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"registert","name":"\u767b\u8bb0\u65e5\u671f","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"content","name":"\u8bf4\u660e\u5907\u6ce8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"status","name":"\u72b6\u6001\u8fdb\u5ea6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"fuze","name":"\u9879\u76ee\u8d1f\u8d23\u4eba","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"runuser","name":"\u90e8\u95e8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"}],fieldsselarr= [];
 	
 	var c = {
 		reload:function(){
@@ -69,14 +69,14 @@ $(document).ready(function(){
 		},
 		subscribelist:function(){
 			js.subscribe({
-				title:'项目员工('+nowtabs.name+')',
-				cont:'项目员工('+nowtabs.name+')的列表的',
-				explain:'订阅[项目员工]的列表',
+				title:'员工工时('+nowtabs.name+')',
+				cont:'员工工时('+nowtabs.name+')的列表的',
+				explain:'订阅[员工工时]的列表',
 				objtable:a
 			});
 		},
 		getacturl:function(act){
-			return js.getajaxurl(act,'mode_projectstaff|input','flow',{'modeid':modeid});
+			return js.getajaxurl(act,'mode_projectws|input','flow',{'modeid':modeid});
 		},
 		changatype:function(o1,lx){
 			$("button[id^='changatype{rand}']").removeClass('active');
@@ -120,8 +120,8 @@ $(document).ready(function(){
 			}
 		},
 		daoru:function(){
-			window.managelistprojectstaff = a;
-			addtabs({num:'daoruprojectstaff',url:'flow,input,daoru,modenum=projectstaff',icons:'plus',name:'导入项目员工'});
+			window.managelistprojectws = a;
+			addtabs({num:'daoruprojectws',url:'flow,input,daoru,modenum=projectws',icons:'plus',name:'导入员工工时'});
 		},
 		initcolumns:function(bots){
 			var num = 'columns_'+modenum+'_'+pnum+'',d=[],d1,d2={},i,len=fieldsarr.length,bok;
@@ -191,10 +191,10 @@ $(document).ready(function(){
 	
 	//表格参数设定
 	var bootparams = {
-		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdHN0YWZm'),
+		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdA::'),
 		url:c.storeurl(),storeafteraction:'storeaftershow',storebeforeaction:'storebeforeshow',
 		params:{atype:atype},
-		columns:[{text:"项目名称",dataIndex:"xmselect"},{text:"总进展",dataIndex:"totalp"},{text:"项目类别",dataIndex:"projectt"},{text:"业务类别",dataIndex:"businesst"},{text:"工作类别",dataIndex:"jobst"},{text:"项目负责人",dataIndex:"fuze"},{text:"计划开始",dataIndex:"plans"},{text:"状态进度",dataIndex:"status"},{text:"说明备注",dataIndex:"content"},{text:"项目编号",dataIndex:"num"},{text:"工作类型",dataIndex:"jobtype"},{text:"员工姓名",dataIndex:"employees"},{text:"职责",dataIndex:"duty"},{text:"要求时间",dataIndex:"requestt"},{
+		columns:[{text:"员工姓名",dataIndex:"employees"},{text:"项目名称",dataIndex:"title"},{text:"职责",dataIndex:"duty"},{text:"总进展",dataIndex:"progress"},{text:"本期工时",dataIndex:"work"},{text:"累计工时",dataIndex:"totalwork"},{text:"登记日期",dataIndex:"registert"},{text:"说明备注",dataIndex:"content"},{text:"状态进度",dataIndex:"status"},{text:"项目负责人",dataIndex:"fuze"},{text:"部门",dataIndex:"runuser"},{
 			text:'',dataIndex:'caozuo',callback:'opegs{rand}'
 		}],
 		itemdblclick:function(){
@@ -211,20 +211,12 @@ $(document).ready(function(){
 	
 //[自定义区域start]
 
-    var plid = params.projcetid;
-    if(plid)bootparams.url+='&projcetid='+plid+'';
-    c.setcolumns('title',{
-        renderer:function(v,d){
-            var s = v;
-            if(d.projectid!='')s+='<br><span style="color:#888888;font-size:12px">'+d.projectid+'</span>';
-            return s;
-        }
-    });
+
 
 //[自定义区域end]
 
 	js.initbtn(c);
-	var a = $('#viewprojectstaff_{rand}').bootstable(bootparams);
+	var a = $('#viewprojectws_{rand}').bootstable(bootparams);
 	c.init();
 	var ddata = [{name:'高级搜索',lx:0}];
 	if(admintype==1)ddata.push({name:'自定义列显示',lx:2});
@@ -266,5 +258,5 @@ $(document).ready(function(){
 	</table>
 </div>
 <div class="blank10"></div>
-<div id="viewprojectstaff_{rand}"></div>
+<div id="viewprojectws_{rand}"></div>
 <!--HTMLend-->

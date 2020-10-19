@@ -39,5 +39,24 @@ class mode_projectClassAction extends inputAction{
             'rows' => $barr
         );
     }
+    /**
+     * 项目编号
+     */
+    public function projectnumAjax(){
+        $nums = $this->get('nums');
+        $cars = m('project')->getall("num LIKE '%{$nums}%'", 'num');
+        if(!empty($cars)){
+            $data=[];
+            $cars = array_column($cars,'num');
+            foreach($cars as $v){
+                $data[] = substr($v,-3);
+            }
+            $str = str_pad(max($data)+1,3,0,STR_PAD_LEFT);
+        }else{
+            $str = '001';
+        }
+
+        $this->returnjson($str);
+    }
 }	
 			

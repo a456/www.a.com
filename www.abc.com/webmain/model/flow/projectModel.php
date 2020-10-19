@@ -56,7 +56,6 @@ class flow_projectClassModel extends flowModel
 		$wez	= $this->workobj->rows('projectid='.$id.'');
 		if($wwc>0)$wwc='<font color=red>'.$wwc.'</font>';
 		$rs['workshu'] = ''.$wwc.'/'.$wez.'';
-		$rs['distribution'] = $wwc;
 
 		return $rs;
 	}

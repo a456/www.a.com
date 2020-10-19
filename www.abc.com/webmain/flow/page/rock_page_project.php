@@ -187,11 +187,11 @@ $(document).ready(function(){
 				}
 			});
 		}
-	};	
+	};
 	
 	//表格参数设定
 	var bootparams = {
-		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdA::'),
+        tree:true,fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdA::'),
 		url:c.storeurl(),storeafteraction:'storeaftershow',storebeforeaction:'storebeforeshow',
 		params:{atype:atype},
 		columns:[{text:"项目名称",dataIndex:"title",align:"left"},{text:"项目编号",dataIndex:"num",sortable:true},{text:"负责人",dataIndex:"fuze",sortable:true},{text:"部门名称",dataIndex:"runuser"},{text:"是否免费工程",dataIndex:"is_free"},{text:"送审/编制造价",dataIndex:"manufacturingp"},{text:"项目属性",dataIndex:"type",sortable:true},{text:"状态",dataIndex:"status",sortable:true},{text:"进度(%)",dataIndex:"progress"},{text:"任务数",dataIndex:"workshu"},{text:"分配",dataIndex:"distribution"},{
@@ -222,9 +222,18 @@ c.setcolumns('workshu',{
 		return ''+v+'&nbsp;<a href="javascript:;" onclick="viespere{rand}('+i+')">查看</a>';
 	}
 });
+c.setcolumns('distribution',{
+    renderer:function(v,d,i){
+        return ''+v+'&nbsp;<a href="javascript:;" onclick="workinghours{rand}('+i+')">查看</a>';
+    }
+});
+workinghours{rand}=function(id){
+    var d 	= a.getData(id);
+    var bo 	= addtabs({name:'项目['+d.title+']的员工',url:'flow,page,projectstaff,pnum=allall,atype=all,projcetid='+d.id+'',num:'projectidstaff'+d.id+''});
+}
 viespere{rand}=function(id){
-	var d 	= a.getData(id);
-	var bo 	= addtabs({name:'项目['+d.title+']的任务',url:'flow,page,work,pnum=allall,atype=all,projcetid='+d.id+'',num:'projcetidwork'+d.id+''});
+    var d 	= a.getData(id);
+    var bo 	= addtabs({name:'项目['+d.title+']的任务',url:'flow,page,work,pnum=allall,atype=all,projcetid='+d.id+'',num:'projcetidwork'+d.id+''});
 }
 
 //[自定义区域end]
