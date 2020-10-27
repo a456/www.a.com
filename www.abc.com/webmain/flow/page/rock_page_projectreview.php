@@ -1,17 +1,17 @@
 <?php
 /**
-*	模块：projectstaff.项目员工，
+*	模块：projectreview.造价业务，
 *	说明：自定义区域内可写您想要的代码，模块列表页面，生成分为2块
-*	来源：流程模块→表单元素管理→[模块.项目员工]→生成列表页
+*	来源：流程模块→表单元素管理→[模块.造价业务]→生成列表页
 */
 defined('HOST') or die ('not access');
 ?>
 <script>
 $(document).ready(function(){
 	{params}
-	var modenum = 'projectstaff',modename='项目员工',isflow=0,modeid='76',atype = params.atype,pnum=params.pnum;
+	var modenum = 'projectreview',modename='造价业务',isflow=1,modeid='78',atype = params.atype,pnum=params.pnum;
 	if(!atype)atype='';if(!pnum)pnum='';
-	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"xmselect","name":"\u9879\u76ee\u540d\u79f0","fieldstype":"selectdatafalse","ispx":"0","isalign":"0","islb":"1"},{"fields":"totalp","name":"\u603b\u8fdb\u5c55","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"projectt","name":"\u9879\u76ee\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"businesst","name":"\u4e1a\u52a1\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobst","name":"\u5de5\u4f5c\u7c7b\u522b","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"fuze","name":"\u9879\u76ee\u8d1f\u8d23\u4eba","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"plans","name":"\u8ba1\u5212\u5f00\u59cb","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"status","name":"\u72b6\u6001\u8fdb\u5ea6","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"content","name":"\u8bf4\u660e\u5907\u6ce8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"num","name":"\u9879\u76ee\u7f16\u53f7","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"jobtype","name":"\u5de5\u4f5c\u7c7b\u578b","fieldstype":"checkboxall","ispx":"0","isalign":"1","islb":"1"},{"fields":"employees","name":"\u5458\u5de5\u59d3\u540d","fieldstype":"changeusercheck","ispx":"0","isalign":"0","islb":"1"},{"fields":"duty","name":"\u804c\u8d23","fieldstype":"textarea","ispx":"0","isalign":"0","islb":"1"},{"fields":"requestt","name":"\u8981\u6c42\u65f6\u95f4","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"mid","name":"\u5bf9\u5e94\u4e3b\u8868project.id","fieldstype":"hidden","ispx":"0","isalign":"0","islb":"0"}],fieldsselarr= {"columns_projectstaff_":"xmselect,projectt,businesst,jobst,fuze,plans,status,content,num,jobtype,employees,duty,requestt,caozuo"};
+	var fieldsarr = [{"name":"\u7533\u8bf7\u4eba","fields":"base_name"},{"name":"\u7533\u8bf7\u4eba\u90e8\u95e8","fields":"base_deptname"},{"name":"\u5355\u53f7","fields":"sericnum"},{"fields":"num","name":"\u9879\u76ee\u7f16\u53f7","fieldstype":"selectdatafalse","ispx":"0","isalign":"0","islb":"1"},{"fields":"mid","name":"\u9879\u76eeid","fieldstype":"hidden","ispx":"0","isalign":"0","islb":"0"},{"fields":"title","name":"\u9879\u76ee\u540d\u79f0","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"},{"fields":"type","name":"\u7c7b\u578b","fieldstype":"rockcombo","ispx":"0","isalign":"0","islb":"1"},{"fields":"content","name":"\u5185\u5bb9","fieldstype":"textarea","ispx":"0","isalign":"0","islb":"1"},{"fields":"auditprice","name":"\u7f16\u5236\/\u5ba1\u6838\u9020\u4ef7","fieldstype":"number","ispx":"0","isalign":"0","islb":"1"},{"fields":"freeprice","name":"\u9001\u5ba1\u9020\u4ef7","fieldstype":"number","ispx":"0","isalign":"0","islb":"1"},{"fields":"occurt","name":"\u53d1\u751f\u65f6\u95f4","fieldstype":"datetime","ispx":"0","isalign":"0","islb":"1"},{"fields":"remarks","name":"\u5907\u6ce8","fieldstype":"text","ispx":"0","isalign":"0","islb":"1"}],fieldsselarr= {"columns_projectreview_allall":"num,title,type,content,auditprice,freeprice,occurt,remarks,caozuo"};
 	
 	var c = {
 		reload:function(){
@@ -69,14 +69,14 @@ $(document).ready(function(){
 		},
 		subscribelist:function(){
 			js.subscribe({
-				title:'项目员工('+nowtabs.name+')',
-				cont:'项目员工('+nowtabs.name+')的列表的',
-				explain:'订阅[项目员工]的列表',
+				title:'造价业务('+nowtabs.name+')',
+				cont:'造价业务('+nowtabs.name+')的列表的',
+				explain:'订阅[造价业务]的列表',
 				objtable:a
 			});
 		},
 		getacturl:function(act){
-			return js.getajaxurl(act,'mode_projectstaff|input','flow',{'modeid':modeid});
+			return js.getajaxurl(act,'mode_projectreview|input','flow',{'modeid':modeid});
 		},
 		changatype:function(o1,lx){
 			$("button[id^='changatype{rand}']").removeClass('active');
@@ -120,8 +120,8 @@ $(document).ready(function(){
 			}
 		},
 		daoru:function(){
-			window.managelistprojectstaff = a;
-			addtabs({num:'daoruprojectstaff',url:'flow,input,daoru,modenum=projectstaff',icons:'plus',name:'导入项目员工'});
+			window.managelistprojectreview = a;
+			addtabs({num:'daoruprojectreview',url:'flow,input,daoru,modenum=projectreview',icons:'plus',name:'导入造价业务'});
 		},
 		initcolumns:function(bots){
 			var num = 'columns_'+modenum+'_'+pnum+'',d=[],d1,d2={},i,len=fieldsarr.length,bok;
@@ -191,10 +191,10 @@ $(document).ready(function(){
 	
 	//表格参数设定
 	var bootparams = {
-		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdHN0YWZm'),
+		fanye:true,modenum:modenum,modename:modename,statuschange:false,tablename:jm.base64decode('cHJvamVjdHJldmlldw::'),
 		url:c.storeurl(),storeafteraction:'storeaftershow',storebeforeaction:'storebeforeshow',
 		params:{atype:atype},
-		columns:[{text:"项目名称",dataIndex:"xmselect"},{text:"总进展",dataIndex:"totalp"},{text:"项目类别",dataIndex:"projectt"},{text:"业务类别",dataIndex:"businesst"},{text:"工作类别",dataIndex:"jobst"},{text:"项目负责人",dataIndex:"fuze"},{text:"计划开始",dataIndex:"plans"},{text:"状态进度",dataIndex:"status"},{text:"说明备注",dataIndex:"content"},{text:"项目编号",dataIndex:"num"},{text:"工作类型",dataIndex:"jobtype",align:"left"},{text:"员工姓名",dataIndex:"employees"},{text:"职责",dataIndex:"duty"},{text:"要求时间",dataIndex:"requestt"},{
+		columns:[{text:"申请人",dataIndex:"base_name",sortable:true},{text:"申请人部门",dataIndex:"base_deptname",sortable:true},{text:"单号",dataIndex:"sericnum"},{text:"项目编号",dataIndex:"num"},{text:"项目名称",dataIndex:"title"},{text:"类型",dataIndex:"type"},{text:"内容",dataIndex:"content"},{text:"编制/审核造价",dataIndex:"auditprice"},{text:"送审造价",dataIndex:"freeprice"},{text:"发生时间",dataIndex:"occurt"},{text:"备注",dataIndex:"remarks"},{text:"状态",dataIndex:"statustext"},{
 			text:'',dataIndex:'caozuo',callback:'opegs{rand}'
 		}],
 		itemdblclick:function(){
@@ -224,7 +224,7 @@ var plid = params.projcetid;
 //[自定义区域end]
 
 	js.initbtn(c);
-	var a = $('#viewprojectstaff_{rand}').bootstable(bootparams);
+	var a = $('#viewprojectreview_{rand}').bootstable(bootparams);
 	c.init();
 	var ddata = [{name:'高级搜索',lx:0}];
 	if(admintype==1)ddata.push({name:'自定义列显示',lx:2});
@@ -249,9 +249,9 @@ var plid = params.projcetid;
 	<tr>
 		<td style="padding-right:10px;" id="tdleft_{rand}" nowrap><button id="addbtn_{rand}" class="btn btn-primary" click="clickwin,0" disabled type="button"><i class="icon-plus"></i> 新增</button></td>
 		<td>
-			<input class="form-control" style="width:160px" id="key_{rand}" placeholder="关键字">
+			<input class="form-control" style="width:160px" id="key_{rand}" placeholder="关键字/申请人/单号">
 		</td>
-		<td style="padding-left:10px"><select class="form-control" style="width:120px" id="selstatus_{rand}"><option value="">-全部状态-</option><option style="color:blue" value="0">待处理</option><option style="color:green" value="1">已审核</option><option style="color:red" value="2">不同意</option><option style="color:#888888" value="5">已作废</option></select></td>
+		<td style="padding-left:10px"><select class="form-control" style="width:120px" id="selstatus_{rand}"><option value="">-全部状态-</option><option style="color:blue" value="0">待处理</option><option style="color:green" value="1">已审核</option><option style="color:red" value="2">不同意</option><option style="color:#888888" value="5">已作废</option><option style="color:#17B2B7" value="23">退回</option></select></td>
 		<td style="padding-left:10px">
 			<div style="width:85px" class="btn-group">
 			<button class="btn btn-default" click="searchbtn" type="button">搜索</button><button class="btn btn-default" id="downbtn_{rand}" type="button" style="padding-left:8px;padding-right:8px"><i class="icon-angle-down"></i></button> 
@@ -266,5 +266,5 @@ var plid = params.projcetid;
 	</table>
 </div>
 <div class="blank10"></div>
-<div id="viewprojectstaff_{rand}"></div>
+<div id="viewprojectreview_{rand}"></div>
 <!--HTMLend-->
