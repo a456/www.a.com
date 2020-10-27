@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2020-10-27 13:17:35
+Date: 2020-10-27 20:53:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -67,7 +67,7 @@ CREATE TABLE `oa_admin` (
 -- ----------------------------
 -- Records of oa_admin
 -- ----------------------------
-INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2083', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-10-27 13:15:14', '1');
+INSERT INTO `oa_admin` VALUES ('1', null, 'admin', '管理员', 'e10adc3949ba59abbe56e057f20f883e', '2083', '1', '1', '男', null, 'upload/face/1.jpg', '2', '开发部', '3', '财务部', '财务总监', '广诚开发团队/开发部', '5', '诸葛亮', '项目主管', '0', '[1],[2],[3]', '[5]', '1', '15800000123', '1', '2016-06-01', null, '2017-03-08 09:52:30', null, null, null, '2', 'guanliyuan', null, '1', '1', '2020-10-27 13:19:04', '1');
 INSERT INTO `oa_admin` VALUES ('2', null, 'diaochan', '貂蝉', 'e10adc3949ba59abbe56e057f20f883e', '70', '1', '0', '女', null, 'upload/face/2.jpg', '3', '财务部', null, null, null, '广诚开发团队/财务部', '5', '诸葛亮', '财务总监', '0', '[1],[3]', '[5]', null, '15800000007', '1', '2016-08-09', null, null, null, null, null, '0', 'diaochan', null, '2', '0', '2020-09-25 18:11:43', '1');
 INSERT INTO `oa_admin` VALUES ('3', null, 'xiaoqiao', '小乔', 'e10adc3949ba59abbe56e057f20f883e', '123', '1', '0', '女', null, 'upload/face/3.jpg', '3', '财务部', null, null, null, '广诚开发团队/财务部', '2', '貂蝉', '出纳', '0', '[1],[3]', '[5],[2]', null, '15800000001', '1', '2017-05-02', null, '2016-08-30 20:34:23', null, null, null, '0', 'xiaoqiao', null, '2', '0', '2020-09-26 16:05:25', '1');
 INSERT INTO `oa_admin` VALUES ('4', null, 'daqiao', '大乔', 'e10adc3949ba59abbe56e057f20f883e', '196', '1', '0', '女', null, 'upload/face/4.jpg', '4', '行政人事部', null, null, null, '广诚开发团队/行政人事部', '5', '诸葛亮', '人事主管', '0', '[1],[4]', '[5]', null, '15800000002', '1', '2017-07-01', null, '2016-10-20 22:27:51', null, null, null, '0', 'daqiao', null, '2', '0', null, '1');
@@ -7507,7 +7507,7 @@ CREATE TABLE `oa_logintoken` (
 -- Records of oa_logintoken
 -- ----------------------------
 INSERT INTO `oa_logintoken` VALUES ('100', '1', '管理员', 's05wpeu1', '2020-10-27 11:13:27', '2020-10-27 12:12:50', 'pc', '1603768407357', '127.0.0.1', 'Firefox', '1');
-INSERT INTO `oa_logintoken` VALUES ('103', '1', '管理员', '073eob8g', '2020-10-27 13:01:45', '2020-10-27 13:15:14', 'pc', '1603774905723', '127.0.0.1', 'Firefox', '1');
+INSERT INTO `oa_logintoken` VALUES ('103', '1', '管理员', '073eob8g', '2020-10-27 13:01:45', '2020-10-27 13:19:04', 'pc', '1603774905723', '127.0.0.1', 'Firefox', '1');
 INSERT INTO `oa_logintoken` VALUES ('101', '1', '管理员', 't0xlwfda', '2020-10-27 12:15:09', '2020-10-27 12:25:17', 'pc', '1603772109471', '127.0.0.1', 'Firefox', '1');
 INSERT INTO `oa_logintoken` VALUES ('102', '1', '管理员', 'otzo8c1x', '2020-10-27 12:25:26', '2020-10-27 13:01:42', 'pc', '1603772726190', '127.0.0.1', 'Firefox', '1');
 INSERT INTO `oa_logintoken` VALUES ('99', '1', '管理员', 'q8ewdtbt', '2020-10-27 11:00:07', '2020-10-27 11:10:11', 'pc', '1603609010299', '127.0.0.1', 'Firefox', '1');
