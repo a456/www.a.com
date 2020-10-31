@@ -10,7 +10,7 @@ class flow_projectreviewClassModel extends flowModel
         $this->projcetid = (int)$this->rock->post('projcetid');
 	}
     public function flowrsreplace($rs, $slx=0){
-        $project = m('project')->getone('id='.$this->projcetid,'num,title,content');
+        $project = m('project')->getone('id='.$rs['mid'],'num,title,content');
         $pid = m('option')->getone("num='costtype'", 'id');
         $arr = m('option')->getone("pid={$pid['id']} and value='".$rs['type']."'", 'name');
         $rs['type'] = $arr['name'];
