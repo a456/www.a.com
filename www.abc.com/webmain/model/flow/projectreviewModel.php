@@ -23,6 +23,9 @@ class flow_projectreviewClassModel extends flowModel
     protected function flowcheckname($num){
         $sid = '';
         $sna = '';
+        if ($this->rs['is_process'] == 1) {
+            return array('11111','不走审批');
+        }
         $project = m('project')->getone('id='.$this->rs['mid'],'fuze,fuzeid,runuser,runuserid');
         if($num=='principal'){
             $sid = $project['fuzeid'];
